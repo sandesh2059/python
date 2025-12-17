@@ -38,3 +38,9 @@ dict_3 = {'name':"Sandesh", 'age':23, }
 value = dict_3.popitem()
 print(value)
 print(dict_3)
+
+
+#key value
+
+dict_3['name'] = ["ayato"]
+print(dict_3)
