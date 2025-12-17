@@ -52,14 +52,88 @@
 
 # task 1
 
-listing = []
-seting = {}
+# listing = []
+# seting = {}
 
-if listing and seting:
+# if listing and seting:
+#     print("True")
+# else:
+#     print("False")
+
+
+# task 2
+# seting = {2, 3, 4, 5}
+# listing = [1, 2, 3, 4]
+# if not listing and not seting:
+#     print("true")
+# else:
+#     print("false")
+
+
+
+# assignment operators
+# a = 10
+# a += 20
+# print("a is  ", a)
+
+# b = 10
+# b -= a
+# print(b)
+
+# c = 10
+# c *= a
+# print(c)
+
+# d = 10
+# d /= 30
+# print(d)
+
+# e = 2
+# e **= 3
+# print(e)  #exponent
+
+
+# f = 10
+# f //= 2
+# print(f)   #FLOORdivision
+
+
+# g = 10
+# g %= 5
+# print(g)  #modulus
+
+
+# membership operators
+# a = 22
+# b = [10, 20, 30, 40]
+# c = a in b                 # to check if a is in list b or not..
+# print(c)
+
+# a = 10
+# b = [10, 20, 30, 40]
+# c = a not in b
+# print(c)
+
+#keys or values to check membership
+
+dict = {'name':"sandesh", 'age':23}
+a = 'name'
+c = a in dict                            #to check membership using key
+print(c)
+
+print("kazuha" in dict.values())         # to check membership using values
+print('name' in dict)    #shortcut version
+
+
+
+name = "sandesh"
+if 'z' in name:
     print("True")
 else:
     print("False")
 
+
+# bitwise operators
 
 
 
