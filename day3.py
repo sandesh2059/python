@@ -21,3 +21,12 @@ for i in range(len(name)):
     name[i] = element[::-1]
 
 print(name)
+
+
+
+listing = ['ssshyyyuuuuhh','yyyjjkkkeee','ooiieee']
+for i in range(len(listing)):
+    element = listing[i]
+    for i in range(len(element)):
+        if element[i] 
+
