@@ -30,3 +30,27 @@ def total_sum(n):
         add += n % 10
         n //= 10
     return add
+
+def menu():
+    while True:
+        print("\n------ NUMBER ANALYZER MENU ------")
+        print("1. Analyze a number")
+        print("2. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            num = int(input("Enter a number to analyze: "))
+            print("Reversed number: ", reverse(num))
+            palindrome(num)
+            print("Total digits: ", total_digits(num))
+            print("Sum of digits: ", total_sum(num))
+
+        elif choice == '2':
+            print("EXITING")
+            break
+
+        else:
+            print("Invalid choice, try again.")
+
+menu()
