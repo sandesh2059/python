@@ -26,6 +26,16 @@ class number_analyzer():
             total += self.n % 10
             self.n //= 10
         return total 
+    
+
+
+    def analyze(self):
+        print("-----number analysis------")
+        print("the number is: ", self.n)
+        print("the reverse is: ", self.reverse())
+        print("Palindrome: ", "YES" if self.is_palindrome() else "NO")
+        print("the total digits are: ", self.total_digits())
+        print("the sum of all the digits is: ", self.sum_of_digits())
 
     
     
