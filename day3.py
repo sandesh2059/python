@@ -17,16 +17,23 @@
 
 name = ['ram', 'shyam', 'hari', 'sandesh', 'chaudhary']
 for i in range(len(name)):
-    element = name[i]
-    name[i] = element[::-1]
+    
+    name[i] = name[i][::-1]
 
 print(name)
 
 
 
 listing = ['ssshyyyuuuuhh','yyyjjkkkeee','ooiieee']
-for i in range(len(listing)):
-    element = listing[i]
-    for i in range(len(element)):
-        if element[i] 
+result = []
+
+for word in listing:
+    unique = ''
+    for ch in word:
+        if ch not in unique:
+            unique += ch
+    result.append(unique)
+print(result)
+
+
 
