@@ -4,27 +4,30 @@ class number_analyzer():
         self.n = n
     
     def reverse(self):
+        n = self.n
         rev = 0
-        while self.n > 0:
-            rev = rev * 10 + (self.n % 10)
-            self.n //= 10
-            return rev
+        while n > 0:
+            rev = rev * 10 + (n % 10)
+            n //= 10
+        return rev
     
     def is_palindrome(self):
-        return self.is_palindrome == self.reverse
+        return self.n == self.reverse()
     
     def total_digits(self):
+        n = self.n
         count = 0
-        while self.n > 0:
+        while n > 0:
             count += 1
-            self.n //= 10
-            return count
+            n //= 10
+        return count
 
     def sum_of_digits(self):
+        n = self.n
         total = 0
-        while self.n > 0:
-            total += self.n % 10
-            self.n //= 10
+        while n > 0:
+            total += n % 10
+            n //= 10
         return total 
     
 
@@ -37,11 +40,33 @@ class number_analyzer():
         print("the total digits are: ", self.total_digits())
         print("the sum of all the digits is: ", self.sum_of_digits())
 
+
+def menu():
+    while True:
+        print("choose the number")
+        print("1. perform number analysis")
+        print("2. exit")
+
+        choice = input("Enter a number: ")
+
+        if choice == '1':
+            num = int(input("enter your number to perform analysis: "))
+            obj1 = number_analyzer(num)
+            obj1.analyze()
+        
+
+        elif choice == '2':
+            print("Exiting")
+            break
+
+        else:
+            print("invalid choice")
+
+menu()
+
     
     
 
 
 
 
-
-n1 = number_analyzer(23412)
