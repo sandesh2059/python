@@ -56,15 +56,22 @@
 
 
 
-marks = [12, 33, 12, 44, 11]
+# marks = [12, 33, 12, 44, 11]
 
-total = sum(marks)
+# total = sum(marks)
 
-new_marks = int(input("enter a new marks: "))
+# new_marks = int(input("enter a new marks: "))
 
-marks.append(new_marks)
+# marks.append(new_marks)
 
-for i in range(len(marks))
+# for i in range(len(marks)):
+
+
+def greet_student(name):
+    print(f"welcome to the python class {name}")
+
+name = input('enter name: ')
+greet_student(name)
 
 
 
