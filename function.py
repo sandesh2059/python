@@ -67,11 +67,65 @@
 # for i in range(len(marks)):
 
 
-def greet_student(name):
-    print(f"welcome to the python class {name}")
+# def greet_student(name):
+#     print(f"welcome to the python class {name}")
+#     return f"good day {name}"
 
-name = input('enter name: ')
-greet_student(name)
+# name = input('enter name: ')
+# greet = greet_student(name)
+# print(greet)
+
+
+
+
+# def iterate_list(name: list) -> list:
+
+
+
+# def volume_cuboid(length, breadth, height):
+#     return length * breadth * height
+
+
+
+# length = int(input("enter length: "))
+# breadth = int(input("enter breadth: "))
+# height = int(input("enter height: "))
+# print(volume_cuboid(length, breadth, height))
+
+
+
+
+
+# def reverse(marks):
+#     for i in range(len(marks)):
+#         marks[i] = marks[i][::-1]
+#         return marks
+
+# marks = ['123', '3423', '413', '1454']
+
+# print(reverse(marks))
+
+
+
+def message(num):
+    for i in range(num):
+        print("hello my name is sandesh ")
+    return ''
+n = int(input("enter how many times do you want to print the message: "))
+print(message(n))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
