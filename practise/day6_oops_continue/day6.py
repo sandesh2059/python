@@ -31,7 +31,4 @@ class BankAccount():
         balance = balance + amount
         return balance
     
-    def withdraw(self):
-        self.amount = int(input("Enter amount to withdraw: "))
-        self.balance = self.balance - self.amount
-        print(f"({self.amount} was withdrawn you new balance is {check_balance()})")
+    
