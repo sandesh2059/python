@@ -52,5 +52,9 @@ def menu():
         if choice == 1:
             print(f"your balance is ", account.check_balance())
 
+        if choice == 2:
+            amt = int(input("enter amount to deposite: "))
+            print("updated balance: ", account.deposite(amt))
+
         
 menu()
