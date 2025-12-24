@@ -31,7 +31,8 @@ class BankAccount():
     def withdraw(self, amount):
         if self.balance < amount:
             print("insufficient balance")
-        self.balance = self.balance - amount
+        else:
+            self.balance = self.balance - amount
         return self.balance
         
     
@@ -52,9 +53,22 @@ def menu():
         if choice == 1:
             print(f"your balance is ", account.check_balance())
 
-        if choice == 2:
+        elif choice == 2:
             amt = int(input("enter amount to deposite: "))
             print("updated balance: ", account.deposite(amt))
+        
+        elif choice == 3:
+            amt = int(input("enter amount to withdraw: "))
+            print("updated balance is: ", account.withdraw(amt))
+        
+        elif choice == 4:
+            print("exiting")
+            break
+
+        else:
+            print("invalid choice")
+
+
 
         
 menu()
