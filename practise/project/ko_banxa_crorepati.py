@@ -13,5 +13,22 @@ class Question():
         for i, option in enumerate(self.options, start = 1):
             print(f"{i}. {option}")
 
-    def answer(self, answer):
-        return answer == self.correct_ans 
+    def is_Correct(self, answer):
+        return answer == self.correct_ans
+
+class game():
+    def __init__(self):
+        self.question = []
+        self.winning = 0
+
+    def add_Question(self, question):
+        self.question.append(question)
+    
+    def start(self):
+        for q in self.question:
+            q.display()
+            answer = int(input("enter your answer(1-4): ", ))
+            
+
+
+        
