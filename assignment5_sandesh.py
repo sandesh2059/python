@@ -21,7 +21,7 @@ def menu():
         print("2. sum of digits of a number")
         print("3. exit")
 
-        choice = int(input("enter your choice: "))
+        choice = int(input("enter your choice: "))  
 
         if choice == 1:
             words = input("enter a word: ")
