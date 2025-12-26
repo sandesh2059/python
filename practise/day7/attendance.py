@@ -25,3 +25,10 @@ def mark_attendance(students):
         students[choice - 1]["present"] = False
 
     print("Attendance updated")
+
+def display_attendance(students):
+    print("\n--- Attendance Summary ---")
+    for s in students:
+        status = "Present" if s["present"] else "Absent"
+        print(f"{s['name']} : {status}")
+
