@@ -35,3 +35,30 @@ def view_books():
     for book in library:
         status = "Issued" if book["issued"] else "Available"
         print(f"{book['title']} ({book['author']}) - {status}")
+
+def menu():
+    while True:
+        print("\n--- Library System ---")
+        print("1. Add Book")
+        print("2. Issue Book")
+        print("3. Return Book")
+        print("4. View Books")
+        print("5. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == '1':
+            add_book()
+        elif choice == '2':
+            issue_book()
+        elif choice == '3':
+            return_book()
+        elif choice == '4':
+            view_books()
+        elif choice == '5':
+            break
+        else:
+            print("Invalid choice")
+
+
+menu()
