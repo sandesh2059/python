@@ -14,10 +14,18 @@ def add_book():
     })
 
     print("Book added successfully")
-    def issue_book():
-        for i, book in enumerate(library, start=1):
-            print(f"{i}. {book['title']}")
+def issue_book():
+    for i, book in enumerate(library, start=1):
+        print(f"{i}. {book['title']}")
 
-        choice = int(input("Select book number: "))
-        library[choice - 1]["issued"] = True
-        print("Book issued")
+    choice = int(input("Select book number: "))
+    library[choice - 1]["issued"] = True
+    print("Book issued")
+
+def return_book():
+    for i, book in enumerate(library, start=1):
+        print(f"{i}. {book['title']}")
+
+    choice = int(input("Select book number: "))
+    library[choice - 1]["issued"] = False
+    print("Book returned")
