@@ -29,3 +29,9 @@ def return_book():
     choice = int(input("Select book number: "))
     library[choice - 1]["issued"] = False
     print("Book returned")
+
+def view_books():
+    print("\n--- Library Books ---")
+    for book in library:
+        status = "Issued" if book["issued"] else "Available"
+        print(f"{book['title']} ({book['author']}) - {status}")
