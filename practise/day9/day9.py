@@ -47,5 +47,20 @@ class Cart:
         for item in self.items:
             total += item["product"].price * item["quantity"]
         return total
+    def display_cart(self):
+        if not self.items:
+            print("\nCart is empty.")
+            return
+
+        print("\n--- Your Cart ---")
+        for item in self.items:
+            p = item["product"]
+            qty = item["quantity"]
+            print(f"{p.name} x {qty} = Rs. {p.price * qty}")
+        total = self.calculate_total()
+        print(f"Total: Rs. {total}")
+
+    def clear_cart(self):
+        self.items = []
 
 
