@@ -63,4 +63,10 @@ class Cart:
     def clear_cart(self):
         self.items = []
 
+class Shop:
+    def __init__(self):
+        self.products = []
+        self.cart = Cart()
+
+
 
