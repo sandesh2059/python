@@ -15,6 +15,7 @@ class Cart:
         self.items = []
     
     def add_product(self, product, quantity=1):
+
         """Add a product to the cart. If already exists, increase quantity."""
         # Check if product already in cart
         for item in self.items:
@@ -25,4 +26,20 @@ class Cart:
         # If not found, append new entry
         self.items.append({"product": product, "quantity": quantity})
         print(f"Added {product.name} to cart.")
+
+    
+    def remove_product(self, product_id, quantity=1):
+        """Remove quantity of a product or remove entirely if 0 left."""
+        for item in self.items:
+            if item["product"].product_id == product_id:
+                if quantity >= item["quantity"]:
+                    # Remove entire item
+                    self.items.remove(item)
+                    print(f"Removed {item['product'].name} from cart.")
+                else:
+                    item["quantity"] -= quantity
+                    print(f"Removed {quantity} of {item['product'].name} from cart.")
+                return
+        print("Product not found in cart.")
+
 
