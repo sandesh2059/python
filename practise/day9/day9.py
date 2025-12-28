@@ -7,3 +7,10 @@ class Product:
     def display(self):
         """Display basic info of the product."""
         print(f"{self.product_id}. {self.name} - Rs. {self.price}")
+
+
+class Cart:
+    def __init__(self):
+        # Each entry: {"product": Product obj, "quantity": int}
+        self.items = []
+
