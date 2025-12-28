@@ -41,5 +41,11 @@ class Cart:
                     print(f"Removed {quantity} of {item['product'].name} from cart.")
                 return
         print("Product not found in cart.")
+    def calculate_total(self):
+        """Return total price without discount."""
+        total = 0
+        for item in self.items:
+            total += item["product"].price * item["quantity"]
+        return total
 
 
