@@ -83,6 +83,12 @@ def find_product(self, product_id):
             if p.product_id == product_id:
                 return p
         return None
+def checkout(self):
+        if not self.cart.items:
+            print("Cart is empty. Nothing to checkout.")
+            return
+
+        total = self.cart.calculate_total()
 
 
 
