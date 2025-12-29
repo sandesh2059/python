@@ -89,6 +89,21 @@ def checkout(self):
             return
 
         total = self.cart.calculate_total()
+        discount = 0
+        if total > 50000:
+            discount = total * 0.10  # 10% discount
+            total_after_discount = total - discount
+            print(f"\nCongratulations! You got a 10% discount of Rs. {discount:.2f}")
+            print(f"Total after discount: Rs. {total_after_discount:.2f}")
+        else:
+            total_after_discount = total
+            print("\nNo discount applied.")
+            print(f"Total to pay: Rs. {total_after_discount}")
+
+        # After checkout, clear cart
+        self.cart.clear_cart()
+        print("Checkout complete. Thank you for shopping!\n")
+
 
 
 
