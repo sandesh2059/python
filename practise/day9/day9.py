@@ -106,6 +106,12 @@ def checkout(self):
 
 def main_menu():
     shop = Shop()
+    shop.add_product_to_catalog(Product(1, "Laptop", 80000))
+    shop.add_product_to_catalog(Product(2, "Smartphone", 40000))
+    shop.add_product_to_catalog(Product(3, "Headphones", 3000))
+    shop.add_product_to_catalog(Product(4, "Keyboard", 2000))
+    shop.add_product_to_catalog(Product(5, "Mouse", 1500))
+
 
 
 
