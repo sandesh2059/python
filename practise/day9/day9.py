@@ -104,6 +104,9 @@ def checkout(self):
         self.cart.clear_cart()
         print("Checkout complete. Thank you for shopping!\n")
 
+def main_menu():
+    shop = Shop()
+
 
 
 
