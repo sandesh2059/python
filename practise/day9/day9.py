@@ -67,6 +67,8 @@ class Shop:
     def __init__(self):
         self.products = []
         self.cart = Cart()
+def add_product_to_catalog(self, product):
+        self.products.append(product)
 
 
 
