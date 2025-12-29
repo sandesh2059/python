@@ -77,6 +77,13 @@ def show_products(self):
     print("\n--- Available Products ---")
     for p in self.products:
         p.display()
+def find_product(self, product_id):
+        """Return Product object matching the id, or None."""
+        for p in self.products:
+            if p.product_id == product_id:
+                return p
+        return None
+
 
 
 
