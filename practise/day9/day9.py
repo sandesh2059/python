@@ -70,5 +70,14 @@ class Shop:
 def add_product_to_catalog(self, product):
         self.products.append(product)
 
+def show_products(self):
+    if not self.products:
+        print("No products in catalog.")
+        return
+    print("\n--- Available Products ---")
+    for p in self.products:
+        p.display()
+
+
 
 
