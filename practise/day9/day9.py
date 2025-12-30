@@ -154,6 +154,16 @@ def main_menu():
                 continue
 
             shop.cart.remove_product(pid, qty)
+        
+        elif choice == '5':
+            shop.checkout()
+
+        elif choice == '6':
+            print("Exiting the shop. Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
 
 
 
