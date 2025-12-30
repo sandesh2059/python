@@ -119,6 +119,19 @@ def main_menu():
         print("4. Remove Product from Cart")
         print("5. Checkout")
         print("6. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            shop.show_products()
+        
+        elif choice == '2':
+            shop.show_products()
+            try:
+                pid = int(input("Enter Product ID to add: "))
+                qty = int(input("Enter quantity: "))
+            except ValueError:
+                print("Invalid input. Please enter numeric values.")
+                continue
 
 
 
