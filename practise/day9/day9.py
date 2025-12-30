@@ -111,6 +111,15 @@ def main_menu():
     shop.add_product_to_catalog(Product(3, "Headphones", 3000))
     shop.add_product_to_catalog(Product(4, "Keyboard", 2000))
     shop.add_product_to_catalog(Product(5, "Mouse", 1500))
+    while True:
+        print("\n===== SHOP MENU =====")
+        print("1. View Products")
+        print("2. Add Product to Cart")
+        print("3. View Cart")
+        print("4. Remove Product from Cart")
+        print("5. Checkout")
+        print("6. Exit")
+
 
 
 
