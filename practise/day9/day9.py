@@ -132,6 +132,14 @@ def main_menu():
             except ValueError:
                 print("Invalid input. Please enter numeric values.")
                 continue
+            product = shop.find_product(pid)
+            if product:
+                if qty <= 0:
+                    print("Quantity should be at least 1.")
+                else:
+                    shop.cart.add_product(product, qty)
+            else:
+                print("Product not found.")
 
 
 
