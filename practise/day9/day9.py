@@ -140,6 +140,20 @@ def main_menu():
                     shop.cart.add_product(product, qty)
             else:
                 print("Product not found.")
+        
+        elif choice == '3':
+            shop.cart.display_cart()
+
+        elif choice == '4':
+            shop.cart.display_cart()
+            try:
+                pid = int(input("Enter Product ID to remove: "))
+                qty = int(input("Enter quantity to remove: "))
+            except ValueError:
+                print("Invalid input. Please enter numeric values.")
+                continue
+
+            shop.cart.remove_product(pid, qty)
 
 
 
