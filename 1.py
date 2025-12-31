@@ -20,3 +20,7 @@ class Student:
 class StudentManager:
     def __init__(self):
         self.students = []
+    
+    def add_student(self):
+        name = input("Enter student name: ")
+        marks = []
