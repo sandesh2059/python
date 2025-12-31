@@ -17,3 +17,6 @@ class Student:
             return "C"
         else:
             return "Fail"
+class StudentManager:
+    def __init__(self):
+        self.students = []
