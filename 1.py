@@ -5,3 +5,5 @@ class Student:
     
     def total_marks(self):
         return sum(self.marks)
+    def percentage(self):
+        return self.total_marks() / len(self.marks)
