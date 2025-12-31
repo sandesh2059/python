@@ -24,3 +24,10 @@ class StudentManager:
     def add_student(self):
         name = input("Enter student name: ")
         marks = []
+        for i in range(3):
+            m = int(input(f"Enter marks for subject {i+1}: "))
+            marks.append(m)
+
+        student = Student(name, marks)
+        self.students.append(student)
+        print("Student added successfully ✅")
