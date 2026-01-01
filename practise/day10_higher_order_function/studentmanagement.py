@@ -9,7 +9,18 @@ class student():
     
     def total_marks(self):
         return sum(self.marks.values())
-    
+    def percentage(self):
+        return self.total_marks() / len(self.marks)
+    def grade(self, percent):
+        perc = self.percentage()
+        if perc > 80:
+            return 'A+'
+        elif perc > 70 and perc <=90:
+            return 'A'
+        elif perc > 60 and perc <=80:
+            return 'B+'
+        else:
+            return 'Fail'
     
 
         
