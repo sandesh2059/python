@@ -14,3 +14,11 @@ def greater(a):
 
 ll = list(filter(greater, l))
 print(ll)
+
+from functools import reduce
+
+def sum(x , y):
+    return x + y
+
+sum_of_digits = reduce(sum, l)
+print(sum_of_digits)
