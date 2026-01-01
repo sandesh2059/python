@@ -7,6 +7,8 @@ class student():
     def addMarks(self, subject , mark):
         self.marks.append[subject] = mark
     
+    def total_marks(self):
+        return sum(self.marks.values())
     
     
 
