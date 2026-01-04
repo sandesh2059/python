@@ -148,3 +148,13 @@ class StadiumService:
     def __init__(self):
         self.stadiums = []
         self.events = []
+
+    def add_stadium(self, name, capacity):
+        self.stadiums.append(Stadium(name, capacity))
+
+    def add_event(self, event_name, stadium_name):
+        for stadium in self.stadiums:
+            if stadium.name == stadium_name:
+                self.events.append(Event(event_name, stadium))
+                return True
+        return False
