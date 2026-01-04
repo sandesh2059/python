@@ -170,3 +170,13 @@ class StadiumService:
                     return True
                 return False
         return None
+    
+    def cancel_ticket(self, event_name, customer_name):
+        for event in self.events:
+            if event.event_name == event_name:
+                for booking in event.bookings:
+                    if booking.customer_name == customer_name:
+                        event.stadium.cancel_seats(booking.seats)
+                        event.bookings.remove(booking)
+                        return True
+        return False
