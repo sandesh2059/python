@@ -138,3 +138,8 @@ class Event:
         self.event_name = event_name
         self.stadium = stadium
         self.bookings = []
+
+class Booking:
+    def __init__(self, customer_name, seats):
+        self.customer_name = customer_name
+        self.seats = seats
