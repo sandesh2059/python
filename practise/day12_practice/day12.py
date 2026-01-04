@@ -126,3 +126,9 @@ class Stadium:
             self.available_seats -= seats
             return True
         return False
+    
+    def cancel_seats(self, seats):
+        if self.available_seats + seats <= self.capacity:
+            self.available_seats += seats
+            return True
+        return False
