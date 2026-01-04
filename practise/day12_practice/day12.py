@@ -109,3 +109,14 @@
 #         result.append(unique)
 #     return result
 # print("the result is ", clean())
+
+
+
+
+
+
+class Stadium:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.capacity = capacity
+        self.available_seats = capacity
