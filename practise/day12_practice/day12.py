@@ -120,3 +120,9 @@ class Stadium:
         self.name = name
         self.capacity = capacity
         self.available_seats = capacity
+
+    def book_seats(self, seats):
+        if seats <= self.available_seats:
+            self.available_seats -= seats
+            return True
+        return False
