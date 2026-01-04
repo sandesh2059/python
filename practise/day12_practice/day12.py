@@ -132,3 +132,9 @@ class Stadium:
             self.available_seats += seats
             return True
         return False
+    
+class Event:
+    def __init__(self, event_name, stadium):
+        self.event_name = event_name
+        self.stadium = stadium
+        self.bookings = []
