@@ -161,3 +161,12 @@ class StadiumService:
 
     def get_events(self):
         return self.events
+    
+    def book_ticket(self, event_name, customer_name, seats):
+        for event in self.events:
+            if event.event_name == event_name:
+                if event.stadium.book_seats(seats):
+                    event.bookings.append(Booking(customer_name, seats))
+                    return True
+                return False
+        return None
