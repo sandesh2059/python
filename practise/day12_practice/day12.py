@@ -158,3 +158,6 @@ class StadiumService:
                 self.events.append(Event(event_name, stadium))
                 return True
         return False
+
+    def get_events(self):
+        return self.events
