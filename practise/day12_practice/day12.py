@@ -143,3 +143,8 @@ class Booking:
     def __init__(self, customer_name, seats):
         self.customer_name = customer_name
         self.seats = seats
+
+class StadiumService:
+    def __init__(self):
+        self.stadiums = []
+        self.events = []
