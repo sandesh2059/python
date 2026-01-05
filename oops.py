@@ -71,6 +71,7 @@ class BankAccount():
     def __init__(self, balance, number):
         self.balance = balance
         self.number = number
+     
         
     def check_balance(self):
         return self.balance
@@ -86,10 +87,35 @@ class BankAccount():
             return self.balance
         return False
 
-obj1 = BankAccount(5000, 23081019)
-print("your balance is: ", obj1.check_balance())
-print("your balance after deposite is: ", obj1.deposite(4000))
-print("your bakance after withdrawl is: ", obj1.withdraw(1000))
+    
+    # def fund_transfer(self, amount):
+    #     if amount < self.balance1:
+    #         self.balance1 -= amount
+    #         self.balance2 += amount
+            
+    #         return self.balance2
+    #     return False
+
+    def fund_transfer(self, transferto, amount):
+        print(f"the current balance is: {self.balance}")
+        if amount <= self.balance:
+            self.balance -= amount
+            transferto.balance += amount
+            return f"the new balance of account 1 is: {self.balance} , the fund transfered is {amount} and the new balance of account 2 is: {transferto.balance}"
+        else:
+            return f"not enough amount"
+
+
+
+
+transferfrom = BankAccount(5000, 23081019)
+transferTo = BankAccount(1000, 19876232)
+print("transfer from ", transferfrom.fund_transfer(transferTo, 1000))
+
+# print("your balance is: ", obj1.check_balance())
+# print("your balance after deposite is: ", obj1.deposite(4000))
+# print("your bakance after withdrawl is: ", obj1.withdraw(1000))
+# print(f"new balance in account number 2 after fund transfer from number 1 is: ", obj1.fund_transfer(1000))
 
 
 
