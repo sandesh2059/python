@@ -77,7 +77,51 @@
 
 
 # # # question no 3
-# class Car:
+class Car:
+
+    def __init__(self, modelName, fuelLevel):
+        self.__modelName = modelName
+        self.setFuel_level(fuelLevel)
+    
+    def setFuel_level(self, fuelLevel):
+        if fuelLevel >= 0 and fuelLevel <= 100:
+            self.__fuelLevel = fuelLevel
+        else:
+            print("invalid fuel level")
+    
+    def check_fuelLevel(self):
+        return f"the fuel level is: {self.__fuelLevel}"
+    
+    def drive(self):
+        if self.__fuelLevel <= 0:
+            return f"cannot drive as fuel is finished"
+        else:
+            self.__fuelLevel -= 10
+            return f"fuel level reduced by 10 after driving"
+
+    def refeul(self, amount):
+        if self.__fuelLevel == 100:
+            return f"cannot reful as fuel level is max"
+        elif amount + self.__fuelLevel > 100:
+            self.__fuelLevel = 100
+            return f"tank is overflow, setting fuel level to 100"
+        else:
+            self.__fuelLevel += amount
+            return f"the fuel level is: {self.__fuelLevel}"
+
+
+car1 = Car('suzuki', 50)
+print(f"{car1.check_fuelLevel()}")
+print(f"{car1.drive()}")
+print(f"{car1.check_fuelLevel()}")
+print(f"{car1.refeul(int(input("enter the amount to refuel: ")))}")
+
+
+    
+
+
+
+    
 
 
 
