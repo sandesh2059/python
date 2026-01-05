@@ -39,28 +39,28 @@
 # class SmartBulb:
 
 #     def __init__(self, brightness):
-#         self.brightness = brightness
-#         self.status = False
+#         self.__brightness = brightness
+#         self.__status = False
     
 #     def check_status(self):
-#         return f"the bulb's status is {self.status} and the brightness is {self.brightness}"
+#         return f"the bulb's status is {self.__status} and the brightness is {self.__brightness}"
     
 #     def turnOn(self):
-#         self.status = True
-#         self.brightness = 100
-#         return f"the bulb's status is {self.status} and the brightness is {self.brightness}"
+#         self.__status = True
+#         self.__brightness = 100
+#         return f"the bulb's status is {self.__status} and the brightness is {self.__brightness}"
     
 #     def turnOff(self):
-#         self.status = False
-#         self.brightness = 0
-#         return f"the bulb's status is {self.status} and the brightness is {self.brightness}"
+#         self.__status = False
+#         self.__brightness = 0
+#         return f"the bulb's status is {self.__status} and the brightness is {self.__brightness}"
     
 #     def dim(self, value):
-#         if self.status is False:
+#         if self.__status is False:
 #             return f"cannot dim a already off bulb"
-#         elif self.status is True:
-#             if value > 0 and value < self.brightness:
-#                 self.brightness -= value
+#         elif self.__status is True:
+#             if value > 0 and value < self.__brightness:
+#                 self.__brightness -= value
 #             else:
 #                 return f"cannot dim to 0 or less"
 #         return f"the bulb is dimmed by {value}"
@@ -76,7 +76,9 @@
 
 
 
-# # question no 3
+# # # question no 3
+# class Car:
+
 
 
 
