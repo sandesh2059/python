@@ -77,47 +77,117 @@
 
 
 # # # question no 3
-class Car:
+# class Car:
 
-    def __init__(self, modelName, fuelLevel):
-        self.__modelName = modelName
-        self.setFuel_level(fuelLevel)
+#     def __init__(self, modelName, fuelLevel = 50):
+#         self.__modelName = modelName
+#         self.setFuel_level(fuelLevel)
     
-    def setFuel_level(self, fuelLevel):
-        if fuelLevel >= 0 and fuelLevel <= 100:
-            self.__fuelLevel = fuelLevel
+#     def setFuel_level(self, fuelLevel):
+#         if fuelLevel >= 0 and fuelLevel <= 100:
+#             self.__fuelLevel = fuelLevel
+#         else:
+#             print("invalid fuel level")
+    
+#     def check_fuelLevel(self):
+#         return f"the fuel level is: {self.__fuelLevel}"
+    
+#     def drive(self):
+#         if self.__fuelLevel <= 0:
+#             return f"cannot drive as fuel is finished"
+#         else:
+#             self.__fuelLevel -= 10
+#             return f"fuel level reduced by 10 after driving"
+
+#     def refeul(self, amount):
+#         if self.__fuelLevel == 100:
+#             return f"cannot reful as fuel level is max"
+#         elif amount + self.__fuelLevel > 100:
+#             self.__fuelLevel = 100
+#             return f"tank is overflow, setting fuel level to 100"
+#         else:
+#             self.__fuelLevel += amount
+#             return f"the fuel level is: {self.__fuelLevel}"
+
+
+# car1 = Car('suzuki', 50)
+# print(f"{car1.check_fuelLevel()}")
+# print(f"{car1.drive()}")
+# print(f"{car1.check_fuelLevel()}")
+# print(f"{car1.refeul(int(input("enter the amount to refuel: ")))}")
+
+
+
+
+
+# ### question 4
+
+class SmartThermometer:
+
+    def __init__(self, temperature, status):
+        self.__temperature = temperature
+        self.__status = status
+
+#     def celcius_to_fahrenheit(self):
+#         if self.__status == 'fahrenheit':
+#             return f"already in fahrenheit"
+#         else:
+#             return (self.__temperature * 9/5) + 32
+            
+    
+#     def celcius_to_kelvin(self):
+#         if self.__status == 'kelvin':
+#             return f"already in kelvin"
+#         else:
+#             return (self.__temperature - 273.15)
+    
+#     def fahrenheit_to_celcius(self):
+#         if self.__status == 'celcius':
+#             return f"already in celcius"
+#         else:
+#             return (self.__temperature - 32) * 5/9
+        
+#     def fahrenheit_to_kelvin(self):
+#         if self.__status == 'kelvin':
+#             return f"already in kelvin"
+#         else:
+#             return ((self.__temperature - 32) * 5/9 + 273.15)
+    
+#     def kelvin_to_celcius(self):
+#         if self.__status == 'celcius':
+#             return f"already in celcius"
+#         else:
+#             return self.__temperature - 273.15
+    
+#     def kelvin_to_fahrenheit(self):
+#         if self.__status == 'fahrenheit':
+#             return f"already in fahrenheit"
+#         else:
+#             return (self.__temperature - 273.15) * 9/5 + 32
+
+# temp1 = SmartThermometer(60, 'kelvin')
+# print(f"temperature in celcius to fahrenheit: {temp1.celcius_to_fahrenheit()} ")
+# print(f"temperature in celcius to kelvin: {temp1.celcius_to_kelvin()} ")
+# print(f"fahrenheit to celcius: {temp1.fahrenheit_to_celcius()} ")
+# print(f"fahrenheit to kelvin: {temp1.fahrenheit_to_kelvin()} ")
+# print(f"kelvin to celcius: {temp1.kelvin_to_celcius()} ")
+# print(f"kelvin to fahrenheit: {temp1.kelvin_to_fahrenheit()} ")
+
+
+    def get_data(self):
+        if self.__status == 'kelvin':
+            return f"kelvin = {self.__temperature}\nfahrenheit = {(self.__temperature - 273.15) * 9/5 + 32}\ncelcius = {self.__temperature - 273.15}"
+        elif self.__status == 'fahrenheit':
+            return f"fahrenheit = {self.__temperature}\ncelcius = {(self.__temperature - 32) * 5/9}\nkelvin = {(self.__temperature - 32) * 5/9 + 273.15}"
+        elif self.__status == 'celcius':
+            return f"celcius = {self.__temperature}\nfahrenheit = {(self.__temperature * 9/5) + 32}\nkelvin = {(self.__temperature - 273.15)} "
         else:
-            print("invalid fuel level")
-    
-    def check_fuelLevel(self):
-        return f"the fuel level is: {self.__fuelLevel}"
-    
-    def drive(self):
-        if self.__fuelLevel <= 0:
-            return f"cannot drive as fuel is finished"
-        else:
-            self.__fuelLevel -= 10
-            return f"fuel level reduced by 10 after driving"
+            return False
 
-    def refeul(self, amount):
-        if self.__fuelLevel == 100:
-            return f"cannot reful as fuel level is max"
-        elif amount + self.__fuelLevel > 100:
-            self.__fuelLevel = 100
-            return f"tank is overflow, setting fuel level to 100"
-        else:
-            self.__fuelLevel += amount
-            return f"the fuel level is: {self.__fuelLevel}"
-
-
-car1 = Car('suzuki', 50)
-print(f"{car1.check_fuelLevel()}")
-print(f"{car1.drive()}")
-print(f"{car1.check_fuelLevel()}")
-print(f"{car1.refeul(int(input("enter the amount to refuel: ")))}")
-
-
-    
+temp1 = SmartThermometer(20, 'celcius')
+print(f"the temperatures are\n{temp1.get_data()}")
+        
+            
 
 
 
