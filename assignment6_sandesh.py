@@ -122,70 +122,76 @@
 
 # ### question 4
 
-class SmartThermometer:
+# class SmartThermometer:
 
-    def __init__(self, temperature, status):
-        self.__temperature = temperature
-        self.__status = status
+#     def __init__(self, temperature, status):
+#         self.__temperature = temperature
+#         self.__status = status
 
-#     def celcius_to_fahrenheit(self):
-#         if self.__status == 'fahrenheit':
-#             return f"already in fahrenheit"
-#         else:
-#             return (self.__temperature * 9/5) + 32
+# #     def celcius_to_fahrenheit(self):
+# #         if self.__status == 'fahrenheit':
+# #             return f"already in fahrenheit"
+# #         else:
+# #             return (self.__temperature * 9/5) + 32
             
     
-#     def celcius_to_kelvin(self):
-#         if self.__status == 'kelvin':
-#             return f"already in kelvin"
-#         else:
-#             return (self.__temperature - 273.15)
+# #     def celcius_to_kelvin(self):
+# #         if self.__status == 'kelvin':
+# #             return f"already in kelvin"
+# #         else:
+# #             return (self.__temperature - 273.15)
     
-#     def fahrenheit_to_celcius(self):
-#         if self.__status == 'celcius':
-#             return f"already in celcius"
-#         else:
-#             return (self.__temperature - 32) * 5/9
+# #     def fahrenheit_to_celcius(self):
+# #         if self.__status == 'celcius':
+# #             return f"already in celcius"
+# #         else:
+# #             return (self.__temperature - 32) * 5/9
         
-#     def fahrenheit_to_kelvin(self):
+# #     def fahrenheit_to_kelvin(self):
+# #         if self.__status == 'kelvin':
+# #             return f"already in kelvin"
+# #         else:
+# #             return ((self.__temperature - 32) * 5/9 + 273.15)
+    
+# #     def kelvin_to_celcius(self):
+# #         if self.__status == 'celcius':
+# #             return f"already in celcius"
+# #         else:
+# #             return self.__temperature - 273.15
+    
+# #     def kelvin_to_fahrenheit(self):
+# #         if self.__status == 'fahrenheit':
+# #             return f"already in fahrenheit"
+# #         else:
+# #             return (self.__temperature - 273.15) * 9/5 + 32
+
+# # temp1 = SmartThermometer(60, 'kelvin')
+# # print(f"temperature in celcius to fahrenheit: {temp1.celcius_to_fahrenheit()} ")
+# # print(f"temperature in celcius to kelvin: {temp1.celcius_to_kelvin()} ")
+# # print(f"fahrenheit to celcius: {temp1.fahrenheit_to_celcius()} ")
+# # print(f"fahrenheit to kelvin: {temp1.fahrenheit_to_kelvin()} ")
+# # print(f"kelvin to celcius: {temp1.kelvin_to_celcius()} ")
+# # print(f"kelvin to fahrenheit: {temp1.kelvin_to_fahrenheit()} ")
+
+
+#     def get_data(self):
 #         if self.__status == 'kelvin':
-#             return f"already in kelvin"
+#             return f"kelvin = {self.__temperature}\nfahrenheit = {(self.__temperature - 273.15) * 9/5 + 32}\ncelcius = {self.__temperature - 273.15}"
+#         elif self.__status == 'fahrenheit':
+#             return f"fahrenheit = {self.__temperature}\ncelcius = {(self.__temperature - 32) * 5/9}\nkelvin = {(self.__temperature - 32) * 5/9 + 273.15}"
+#         elif self.__status == 'celcius':
+#             return f"celcius = {self.__temperature}\nfahrenheit = {(self.__temperature * 9/5) + 32}\nkelvin = {(self.__temperature - 273.15)} "
 #         else:
-#             return ((self.__temperature - 32) * 5/9 + 273.15)
-    
-#     def kelvin_to_celcius(self):
-#         if self.__status == 'celcius':
-#             return f"already in celcius"
-#         else:
-#             return self.__temperature - 273.15
-    
-#     def kelvin_to_fahrenheit(self):
-#         if self.__status == 'fahrenheit':
-#             return f"already in fahrenheit"
-#         else:
-#             return (self.__temperature - 273.15) * 9/5 + 32
+#             return False
 
-# temp1 = SmartThermometer(60, 'kelvin')
-# print(f"temperature in celcius to fahrenheit: {temp1.celcius_to_fahrenheit()} ")
-# print(f"temperature in celcius to kelvin: {temp1.celcius_to_kelvin()} ")
-# print(f"fahrenheit to celcius: {temp1.fahrenheit_to_celcius()} ")
-# print(f"fahrenheit to kelvin: {temp1.fahrenheit_to_kelvin()} ")
-# print(f"kelvin to celcius: {temp1.kelvin_to_celcius()} ")
-# print(f"kelvin to fahrenheit: {temp1.kelvin_to_fahrenheit()} ")
+# temp1 = SmartThermometer(20, 'celcius')
+# print(f"the temperatures are\n{temp1.get_data()}")
 
 
-    def get_data(self):
-        if self.__status == 'kelvin':
-            return f"kelvin = {self.__temperature}\nfahrenheit = {(self.__temperature - 273.15) * 9/5 + 32}\ncelcius = {self.__temperature - 273.15}"
-        elif self.__status == 'fahrenheit':
-            return f"fahrenheit = {self.__temperature}\ncelcius = {(self.__temperature - 32) * 5/9}\nkelvin = {(self.__temperature - 32) * 5/9 + 273.15}"
-        elif self.__status == 'celcius':
-            return f"celcius = {self.__temperature}\nfahrenheit = {(self.__temperature * 9/5) + 32}\nkelvin = {(self.__temperature - 273.15)} "
-        else:
-            return False
 
-temp1 = SmartThermometer(20, 'celcius')
-print(f"the temperatures are\n{temp1.get_data()}")
+
+
+
         
             
 
