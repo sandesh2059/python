@@ -6,5 +6,9 @@ class Account:
     def check_balance(self):
         return self.balance
 
-
+class SavingAccount(Account):
+    def deposit(self, amount):
+        return f"{self.balance + amount}"
+    
+    
         
