@@ -10,5 +10,14 @@ class SavingAccount(Account):
     def deposit(self, amount):
         return f"{self.balance + amount}"
     
-    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            return f"{amount} withdrawn from {self.acc_number}"
+        else:
+            return "not enough balance"
+
+acc1 = SavingAccount(23081019, 40000)
+print(f"deposit: {acc1.deposit(1000)}")
+
         
