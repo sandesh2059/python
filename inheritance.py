@@ -32,15 +32,15 @@ inheritance
 
 class Phone:
 
-    def __init__(self, name, model, ram):
+    def __init__(self, name, model, RAM):
         self.name = name
         self.model = model
-        self.ram = ram
+        self.RAM = RAM
     
 
 class SmartPhone(Phone):
-    def __init__(self, name, model, ram, memory):
-        super().__init__(name, model, ram)
+    def __init__(self, name, model, RAM, memory):
+        super().__init__(name, model, RAM)
         self.memory = memory
     
     def take_photo(self):
@@ -50,6 +50,6 @@ p1 = SmartPhone('apple','iphone 13', 6, 512)
 
 print(p1.name)
 print(p1.model)
-print(p1.ram)
+print(p1.RAM)
 print(p1.memory)
 print(p1.take_photo())
