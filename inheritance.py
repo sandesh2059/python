@@ -17,8 +17,11 @@ class Dog(Animal):
         super().__init__(name)
         self.breed = breed
     
+    
+    
     def speak(self):
-        return "woof"
+        parent_sound = super().speak()
+        return f"{parent_sound} woof"
 
 d = Dog('tommy', 'husky')
 print(d.name)
