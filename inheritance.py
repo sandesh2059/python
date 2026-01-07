@@ -37,6 +37,9 @@ class Phone:
         self.model = model
         self.RAM = RAM
     
+    def calling(self):
+        return "ONLY audio call supported"
+    
 
 class SmartPhone(Phone):
     def __init__(self, name, model, RAM, memory):
@@ -45,6 +48,9 @@ class SmartPhone(Phone):
     
     def take_photo(self):
         return "taking photo"
+    
+    def calling(self):
+        return "BOTH audio and video call supported"
 
 p1 = SmartPhone('apple','iphone 13', 6, 512)
 
@@ -53,3 +59,4 @@ print(p1.model)
 print(p1.RAM)
 print(p1.memory)
 print(p1.take_photo())
+print(p1.calling())
