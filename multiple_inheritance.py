@@ -40,7 +40,10 @@ class InternshipInfoContainer:
     def longest_and_shortest(self):
         longest = max(intern_list, key=lambda intern: intern.internship_duration)
         shortest = min(intern_list, key=lambda intern: intern.internship_duration)
-        return f"longest: {longest.intern_name} of {longest.department} department = {longest.internship_duration} months\nshortest: {shortest.intern_name} of {shortest.department} department = {shortest.internship_duration} months"
+        return ( f"longest: {longest.intern_name} of {longest.department} department = "
+        f"{longest.internship_duration} months. {longest.intern_name}'s mentor is {longest.employee_name} of position {longest.position}\n"
+        f"shortest: {shortest.intern_name} of {shortest.department} department = "
+        f"{shortest.internship_duration} months. {shortest.intern_name}'s mentor is {shortest.employee_name} of position {shortest.position}")
             
     
 intern1 = Internship('Marketing', 'Alice', 'Manager', 'John', 3)
