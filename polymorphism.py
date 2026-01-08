@@ -44,3 +44,9 @@ class Circle(Shape):
 
     def area(self):
         return 3.14 * self.radius * self.radius
+
+# Function demonstrating polymorphism
+def calculate_area(shape):
+    print("Area:", shape.area())
+
+
