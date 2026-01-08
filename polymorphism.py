@@ -29,3 +29,7 @@
 class Shape:
     def area(self):
         print("Area of shape is undefined")
+class Rectangle(Shape):
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
