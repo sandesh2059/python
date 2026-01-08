@@ -49,4 +49,8 @@ class Circle(Shape):
 def calculate_area(shape):
     print("Area:", shape.area())
 
+rect = Rectangle(10, 5)
+circ = Circle(7)
 
+calculate_area(rect)
+calculate_area(circ)
