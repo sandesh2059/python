@@ -159,15 +159,19 @@
 
 
 
-#                           Check whether a string is a palindrome using a for loop.
+# #                           Check whether a string is a palindrome using a for loop.
 
-word = input(" Enter a word: ")
-reverse = ""
-for i in range(len(word)-1, -1, -1):
-    reverse += word[i]
-print(f"real word is {word} and reversed word is {reverse}")
+# word = input(" Enter a word: ")
+# reverse = ""
+# for i in range(len(word)-1, -1, -1):
+#     reverse += word[i]
+# print(f"real word is {word} and reversed word is {reverse}")
 
-if word == reverse:
-    print("palindorme word")
-else:
-    print("not a palindrome")
+# if word == reverse:
+#     print("palindorme word")
+# else:
+#     print("not a palindrome")
+
+
+
+

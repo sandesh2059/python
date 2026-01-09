@@ -4,7 +4,7 @@
 class Question():
     def __init__(self, text, option, correct_ans, prize):
         self.text = text
-        self.options = options
+        self.option = option
         self.correct_ans = correct_ans
         self.prize = prize
 
@@ -18,16 +18,23 @@ class Question():
 
 class game():
     def __init__(self):
-        self.question = []
+        self.questions = []
         self.winning = 0
 
     def add_Question(self, question):
-        self.question.append(question)
+        self.questions.append(question)
     
     def start(self):
+        print("welcome to ko banxa crorepate")
         for q in self.question:
             q.display()
             answer = int(input("enter your answer(1-4): ", ))
+
+            if q.is_correct(answer):
+                self.winning += q.prize
+    
+
+
             
 
 

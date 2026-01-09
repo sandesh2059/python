@@ -8,14 +8,16 @@
 # ✔ Use a single loop
 
 number = [23, 12, 34, 65, 43, 76, 63]
-smallest = float('inf')
-largest = float('-inf')
 if number[0] > number[1]:
     largest = number[0]
+    second_largest = number[1]
     smallest = number[1]
+    second_smallest = number[0]
 else:
     largest = number[1]
+    second_largest = [0]
     smallest = number[0]
+    second_smallest = number[1]
 for num in number:
     if num > largest:
         second_largest = largest

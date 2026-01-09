@@ -67,69 +67,71 @@
 
 
 
-class BankAccount():
-    def __init__(self, balance, number, history=[]):
-        self.balance = balance
-        self.number = number
-        self.history = history
+# class BankAccount():
+#     def __init__(self, balance, number, history=[]):
+#         self.balance = balance
+#         self.number = number
+#         self.history = history
      
         
-    def check_balance(self):
-        return self.balance
+#     def check_balance(self):
+#         return self.balance
     
-    def deposite(self, amount):
-        self.balance += amount
-        self.history.append(f"deposite: {amount}")
+#     def deposite(self, amount):
+#         self.balance += amount
+#         self.history.append(f"deposite: {amount}")
         
 
 
-        return self.balance
+#         return self.balance
     
-    def withdraw(self, amount):
-        if amount < self.balance:
-            self.balance -= amount
-            self.history.append(f"withdraw: {amount}")
-            return self.balance
-        return False
+#     def withdraw(self, amount):
+#         if amount < self.balance:
+#             self.balance -= amount
+#             self.history.append(f"withdraw: {amount}")
+#             return self.balance
+#         return False
     
-    # def transaction_history(self, transferfrom):
-    #     if transferfrom.deposite()
+#     # def transaction_history(self, transferfrom):
+#     #     if transferfrom.deposite()
         
 
 
     
-    # def fund_transfer(self, amount):
-    #     if amount < self.balance1:
-    #         self.balance1 -= amount
-    #         self.balance2 += amount
+#     # def fund_transfer(self, amount):
+#     #     if amount < self.balance1:
+#     #         self.balance1 -= amount
+#     #         self.balance2 += amount
             
-    #         return self.balance2
-    #     return False
+#     #         return self.balance2
+#     #     return False
 
-    def fund_transfer(self, transferto, amount):
-        print(f"the current balance is: {self.balance}")
-        if amount <= self.balance:
-            self.balance -= amount
-            transferto.balance += amount
-            self.history.append(f'The transfer amount: {amount}')
-            return f"the new balance of account 1 is: {self.balance} , the fund transfered is {amount} and the new balance of account 2 is: {transferto.balance}"
-        else:
-            return f"not enough amount"
-
-
+#     def fund_transfer(self, transferto, amount):
+#         print(f"the current balance is: {self.balance}")
+#         if amount <= self.balance:
+#             self.balance -= amount
+#             transferto.balance += amount
+#             self.history.append(f'The transfer amount: {amount}')
+#             return f"the new balance of account 1 is: {self.balance} , the fund transfered is {amount} and the new balance of account 2 is: {transferto.balance}"
+#         else:
+#             return f"not enough amount"
 
 
-transferfrom = BankAccount(5000, 23081019)
-transferTo = BankAccount(1000, 19876232)
-print("transfer from ", transferfrom.fund_transfer(transferTo, 1000))
-
-print("your balance is: ", transferfrom.check_balance())
-print("your balance after deposite is: ", transferfrom.deposite(4000))
-print("your bakance after withdrawl is: ", transferfrom.withdraw(1000))
 
 
-print(f"history : {transferfrom.history}")
-# print(f"new balance in account number 2 after fund transfer from number 1 is: ", obj1.fund_transfer(1000))
+# transferfrom = BankAccount(5000, 23081019)
+# transferTo = BankAccount(1000, 19876232)
+# print("transfer from ", transferfrom.fund_transfer(transferTo, 1000))
+
+# print("your balance is: ", transferfrom.check_balance())
+# print("your balance after deposite is: ", transferfrom.deposite(4000))
+# print("your bakance after withdrawl is: ", transferfrom.withdraw(1000))
+
+
+# print(f"history : {transferfrom.history}")
+# # print(f"new balance in account number 2 after fund transfer from number 1 is: ", obj1.fund_transfer(1000))
+
+
 
 
 

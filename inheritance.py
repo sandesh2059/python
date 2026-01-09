@@ -120,7 +120,7 @@ class InternshipInfoContainer:
                 self.frontend.append(intern.intern_name)
             elif intern.department == 'Backend':
                 self.backend.append(intern.intern_name)
-        return self.marketing , self.frontend, self.backend
+        return f"marketing: {self.marketing}\nfrontend: {self.frontend}\nbackend: {self.backend}"
             
         
         
@@ -139,6 +139,7 @@ intern_list = [intern1, intern2, intern3, intern4, intern5, intern6, intern7, in
 
 info = InternshipInfoContainer(intern_list)
 print(info.total())
+print(len(info.total()))
 
 
 
