@@ -82,3 +82,10 @@ class Bank(ABC):
     @abstractmethod
     def check_balance(self):
         pass
+class SBI(Bank):
+    def __init__(self):
+        self.balance = 0
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"SBI: Deposited Rs.{amount}")
