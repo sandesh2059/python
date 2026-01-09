@@ -126,3 +126,8 @@ if __name__ == "__main__":
     sbi.check_balance()
 
     print("----------------------")
+
+    nabil = Nabil()
+    nabil.deposit(10000)
+    nabil.withdraw(3000)
+    nabil.check_balance()
