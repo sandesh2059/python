@@ -89,3 +89,13 @@ class SBI(Bank):
     def deposit(self, amount):
         self.balance += amount
         print(f"SBI: Deposited Rs.{amount}")
+    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"SBI: Withdrawn Rs.{amount}")
+        else:
+            print("SBI: Insufficient balance")
+
+    def check_balance(self):
+        print(f"SBI: Current Balance Rs.{self.balance}")
