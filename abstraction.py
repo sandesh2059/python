@@ -117,3 +117,12 @@ class Nabil(Bank):
 
     def check_balance(self):
         print(f"Nabil Bank: Current Balance Rs.{self.balance}")
+
+if __name__ == "__main__":
+
+    sbi = SBI()
+    sbi.deposit(5000)
+    sbi.withdraw(2000)
+    sbi.check_balance()
+
+    print("----------------------")
