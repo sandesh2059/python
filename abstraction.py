@@ -103,3 +103,17 @@ class SBI(Bank):
 class Nabil(Bank):
     def __init__(self):
         self.balance = 0
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Nabil Bank: Deposited Rs.{amount}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Nabil Bank: Withdrawn Rs.{amount}")
+        else:
+            print("Nabil Bank: Insufficient balance")
+
+    def check_balance(self):
+        print(f"Nabil Bank: Current Balance Rs.{self.balance}")
