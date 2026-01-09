@@ -99,3 +99,7 @@ class SBI(Bank):
 
     def check_balance(self):
         print(f"SBI: Current Balance Rs.{self.balance}")
+
+class Nabil(Bank):
+    def __init__(self):
+        self.balance = 0
