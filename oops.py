@@ -181,6 +181,20 @@ class Developer(Employee):
         name, salary = self.get_details()
         return salary * 0.10
 
+# =========================
+# POLYMORPHIC FUNCTION
+# =========================
+def show_employee_info(emp):
+    name, salary = emp.get_details()
+    print("\nName:", name)
+    print("Salary:", salary)
+    print("Bonus:", emp.calculate_bonus())   # Polymorphism
+
+    if Employee.is_high_salary(salary):
+        print("Salary Level: High")
+    else:
+        print("Salary Level: Normal")
+
 
 
 
