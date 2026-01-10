@@ -135,6 +135,22 @@
 
 
 
+from abc import ABC, abstractmethod
+
+# =========================
+# ABSTRACTION (Abstract Class)
+# =========================
+class Employee(ABC):
+
+    company = "TechSoft Pvt. Ltd."   # Class variable (Encapsulation)
+
+    def __init__(self, name, salary):
+        self.__name = name          # Private variable (Encapsulation)
+        self.__salary = salary      # Private variable
+
+    # Getter method (Encapsulation)
+    def get_details(self):
+        return self.__name, self.__salary
 
 
 
