@@ -166,7 +166,14 @@ class Employee(ABC):
     @staticmethod
     def is_high_salary(salary):
         return salary >= 50000
+# =========================
+# INHERITANCE + POLYMORPHISM
+# =========================
+class Manager(Employee):
 
+    def calculate_bonus(self):      # Method overriding (Polymorphism)
+        name, salary = self.get_details()
+        return salary * 0.20
 
 
 
