@@ -175,7 +175,11 @@ class Manager(Employee):
         name, salary = self.get_details()
         return salary * 0.20
 
+class Developer(Employee):
 
+    def calculate_bonus(self):      # Method overriding (Polymorphism)
+        name, salary = self.get_details()
+        return salary * 0.10
 
 
 
