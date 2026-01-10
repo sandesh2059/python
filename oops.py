@@ -196,6 +196,17 @@ def show_employee_info(emp):
         print("Salary Level: Normal")
 
 
+# =========================
+# MAIN PROGRAM
+# =========================
+Employee.show_company()
+
+m = Manager("Sandesh", 80000)
+d = Developer("Ramesh", 40000)
+
+show_employee_info(m)
+show_employee_info(d)
+
 
 
 
