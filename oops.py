@@ -152,6 +152,21 @@ class Employee(ABC):
     def get_details(self):
         return self.__name, self.__salary
 
+    # Abstract method (Abstraction)
+    @abstractmethod
+    def calculate_bonus(self):
+        pass
+
+    # Class method
+    @classmethod
+    def show_company(cls):
+        print("Company:", cls.company)
+
+    # Static method
+    @staticmethod
+    def is_high_salary(salary):
+        return salary >= 50000
+
 
 
 
