@@ -27,3 +27,16 @@ class Library:
         for book_id, details in self.books.items():
             status = "Available" if details["available"] else "Issued"
             print(f"{book_id} | {details['name']} | {details['author']} | {status}")
+    
+    def search_book(self):
+        book_id = input("Enter Book ID to search: ")
+
+        if book_id in self.books:
+            book = self.books[book_id]
+            status = "Available" if book["available"] else "Issued"
+            print("\nBook Found")
+            print("Name:", book["name"])
+            print("Author:", book["author"])
+            print("Status:", status)
+        else:
+            print("Book not found.")
