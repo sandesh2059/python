@@ -16,3 +16,14 @@ class Library:
         }
 
         print("Book added successfully!")
+    
+    def display_books(self):
+        if not self.books:
+            print("Library is empty.")
+            return
+
+        print("\nBook ID | Name | Author | Status")
+        print("--------------------------------")
+        for book_id, details in self.books.items():
+            status = "Available" if details["available"] else "Issued"
+            print(f"{book_id} | {details['name']} | {details['author']} | {status}")
