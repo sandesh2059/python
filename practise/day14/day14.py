@@ -60,3 +60,7 @@ class Member:
 
     def __str__(self):
         return f"ID: {self.member_id}, Name: {self.name}, Borrowed: {self.borrowed_books}"
+class Library:
+    def __init__(self):
+        self.books = {}        # book_id : Book object
+        self.members = {}
