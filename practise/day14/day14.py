@@ -50,3 +50,5 @@ class Book:
         self.title = title
         self.author = author
         self.copies = copies
+    def __str__(self):
+        return f"ID: {self.book_id}, Title: {self.title}, Author: {self.author}, Copies: {self.copies}"
