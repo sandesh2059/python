@@ -69,3 +69,6 @@ class Library:
         if book_id in self.books:
             self.books[book_id].copies += copies
             print(f"Added {copies} more copies of {title}.")
+        else:
+            self.books[book_id] = Book(book_id, title, author, copies)
+            print(f"Book '{title}' added successfully.")
