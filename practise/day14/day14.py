@@ -64,3 +64,8 @@ class Library:
     def __init__(self):
         self.books = {}        # book_id : Book object
         self.members = {}
+    # Book management
+    def add_book(self, book_id, title, author, copies):
+        if book_id in self.books:
+            self.books[book_id].copies += copies
+            print(f"Added {copies} more copies of {title}.")
