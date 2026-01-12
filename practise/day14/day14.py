@@ -72,3 +72,10 @@ class Library:
         else:
             self.books[book_id] = Book(book_id, title, author, copies)
             print(f"Book '{title}' added successfully.")
+    
+    def remove_book(self, book_id):
+        if book_id in self.books:
+            del self.books[book_id]
+            print(f"Book ID {book_id} removed successfully.")
+        else:
+            print("Book not found.")
