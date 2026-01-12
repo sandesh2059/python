@@ -52,3 +52,11 @@ class Book:
         self.copies = copies
     def __str__(self):
         return f"ID: {self.book_id}, Title: {self.title}, Author: {self.author}, Copies: {self.copies}"
+class Member:
+    def __init__(self, member_id, name):
+        self.member_id = member_id
+        self.name = name
+        self.borrowed_books = []
+
+    def __str__(self):
+        return f"ID: {self.member_id}, Name: {self.name}, Borrowed: {self.borrowed_books}"
