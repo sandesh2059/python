@@ -79,3 +79,10 @@ class Library:
             print(f"Book ID {book_id} removed successfully.")
         else:
             print("Book not found.")
+    def display_books(self):
+        if not self.books:
+            print("No books available.")
+        else:
+            print("\nAvailable Books:")
+            for book in self.books.values():
+                print(book)
