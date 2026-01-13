@@ -53,3 +53,16 @@ class Stadium:
         event = self.events[event_id]
         print("Available seats:",
               self.capacity - event["booked_seats"])
+
+stadium = Stadium("National Stadium", 50000)
+
+while True:
+    print("\n--- Stadium Management System ---")
+    print("1. Add Event")
+    print("2. Show Events")
+    print("3. Book Ticket")
+    print("4. Cancel Ticket")
+    print("5. Check Available Seats")
+    print("6. Exit")
+
+    choice = input("Enter your choice: ")
