@@ -66,3 +66,10 @@ while True:
     print("6. Exit")
 
     choice = input("Enter your choice: ")
+
+    if choice == "1":
+        eid = input("Event ID: ")
+        name = input("Event Name: ")
+        date = input("Event Date: ")
+        price = int(input("Ticket Price: "))
+        stadium.add_event(eid, name, date, price)
