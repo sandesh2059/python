@@ -36,3 +36,13 @@ class Stadium:
         event["booked_seats"] += seats
         total_cost = seats * event["price"]
         print(f"Tickets booked successfully. Total cost: {total_cost}")
+    def cancel_ticket(self, event_id, seats):
+        if event_id not in self.events:
+            print("Event not found.")
+            return
+        event = self.events[event_id]
+        if seats > event["booked_seats"]:
+            print("Invalid cancellation.")
+            return
+        event["booked_seats"] -= seats
+        print("Ticket cancelled successfully.")
