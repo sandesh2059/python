@@ -24,3 +24,15 @@ class Stadium:
         for eid, event in self.events.items():
             print(f"ID: {eid}, Name: {event['name']}, Date: {event['date']}, "
                   f"Price: {event['price']}, Booked: {event['booked_seats']}")
+    
+    def book_ticket(self, event_id, seats):
+        if event_id not in self.events:
+            print("Event not found.")
+            return
+        event = self.events[event_id]
+        if event["booked_seats"] + seats > self.capacity:
+            print("Not enough seats available.")
+            return
+        event["booked_seats"] += seats
+        total_cost = seats * event["price"]
+        print(f"Tickets booked successfully. Total cost: {total_cost}")
