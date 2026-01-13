@@ -73,3 +73,15 @@ while True:
         date = input("Event Date: ")
         price = int(input("Ticket Price: "))
         stadium.add_event(eid, name, date, price)
+    elif choice == "2":
+        stadium.show_events()
+
+    elif choice == "3":
+        eid = input("Event ID: ")
+        seats = int(input("Number of seats: "))
+        stadium.book_ticket(eid, seats)
+
+    elif choice == "4":
+        eid = input("Event ID: ")
+        seats = int(input("Seats to cancel: "))
+        stadium.cancel_ticket(eid, seats)
