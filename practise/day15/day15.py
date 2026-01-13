@@ -85,3 +85,13 @@ while True:
         eid = input("Event ID: ")
         seats = int(input("Seats to cancel: "))
         stadium.cancel_ticket(eid, seats)
+    elif choice == "5":
+        eid = input("Event ID: ")
+        stadium.available_seats(eid)
+
+    elif choice == "6":
+        print("Thank you for using Stadium Management System.")
+        break
+
+    else:
+        print("Invalid choice.")
