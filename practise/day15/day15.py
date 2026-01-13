@@ -46,3 +46,10 @@ class Stadium:
             return
         event["booked_seats"] -= seats
         print("Ticket cancelled successfully.")
+    def available_seats(self, event_id):
+        if event_id not in self.events:
+            print("Event not found.")
+            return
+        event = self.events[event_id]
+        print("Available seats:",
+              self.capacity - event["booked_seats"])
