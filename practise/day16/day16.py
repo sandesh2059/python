@@ -37,3 +37,14 @@ class Library:
             return
         for book in self.books.values():
             book.display()
+    
+    def issue_book(self):
+        book_id = input("Enter Book ID to issue: ")
+        if book_id in self.books:
+            if self.books[book_id].copies > 0:
+                self.books[book_id].copies -= 1
+                print("Book issued successfully")
+            else:
+                print("No copies available")
+        else:
+            print("Book not found")
