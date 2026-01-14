@@ -66,3 +66,23 @@ class Library:
             print("6. Exit")
 
             choice = input("Enter choice: ")
+
+            if choice == "1":
+                self.add_book()
+            elif choice == "2":
+                self.remove_book()
+            elif choice == "3":
+                self.display_books()
+            elif choice == "4":
+                self.issue_book()
+            elif choice == "5":
+                self.return_book()
+            elif choice == "6":
+                print("Exiting Library System")
+                break
+            else:
+                print("Invalid choice")
+
+
+library = Library()
+library.menu()
