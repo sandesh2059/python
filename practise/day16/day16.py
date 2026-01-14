@@ -31,3 +31,9 @@ class Library:
             print("Book removed")
         else:
             print("Book not found")
+    def display_books(self):
+        if not self.books:
+            print("No books in library")
+            return
+        for book in self.books.values():
+            book.display()
