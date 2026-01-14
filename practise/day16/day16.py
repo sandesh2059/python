@@ -55,3 +55,14 @@ class Library:
             print("Book returned successfully")
         else:
             print("Book not found")
+    def menu(self):
+        while True:
+            print("\n--- Library Menu ---")
+            print("1. Add Book")
+            print("2. Remove Book")
+            print("3. Display Books")
+            print("4. Issue Book")
+            print("5. Return Book")
+            print("6. Exit")
+
+            choice = input("Enter choice: ")
