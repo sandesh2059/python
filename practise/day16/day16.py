@@ -22,3 +22,12 @@ class Library:
         copies = int(input("Enter Copies: "))
         self.books[book_id] = Book(book_id, title, author, copies)
         print("Book added successfully")
+
+
+    def remove_book(self):
+        book_id = input("Enter Book ID to remove: ")
+        if book_id in self.books:
+            del self.books[book_id]
+            print("Book removed")
+        else:
+            print("Book not found")
