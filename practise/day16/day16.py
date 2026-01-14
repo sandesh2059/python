@@ -48,3 +48,10 @@ class Library:
                 print("No copies available")
         else:
             print("Book not found")
+    def return_book(self):
+        book_id = input("Enter Book ID to return: ")
+        if book_id in self.books:
+            self.books[book_id].copies += 1
+            print("Book returned successfully")
+        else:
+            print("Book not found")
