@@ -152,3 +152,21 @@ class StudentManagementSystem:
             print("4. Display Students")
             print("5. Search Student")
             print("6. Exit")
+        
+            choice = input("Enter choice: ")
+
+            if choice == "1":
+                self.add_student()
+            elif choice == "2":
+                self.remove_student()
+            elif choice == "3":
+                self.update_student()
+            elif choice == "4":
+                self.display_students()
+            elif choice == "5":
+                self.search_student()
+            elif choice == "6":
+                print("Exiting Student Management System")
+                break
+            else:
+                print("Invalid choice")
