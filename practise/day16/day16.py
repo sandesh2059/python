@@ -123,3 +123,10 @@ class StudentManagementSystem:
         if sid not in self.students:
             print("Student not found")
             return
+        name = input("Enter new name: ")
+        age = int(input("Enter new age: "))
+        course = input("Enter new course: ")
+        self.students[sid].name = name
+        self.students[sid].age = age
+        self.students[sid].course = course
+        print("Student updated successfully")
