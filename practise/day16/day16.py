@@ -97,3 +97,12 @@ class Student:
 
     def display(self):
         print(f"ID: {self.sid} | Name: {self.name} | Age: {self.age} | Course: {self.course}")
+class StudentManagementSystem:
+    def __init__(self):
+        self.students = {}
+
+    def add_student(self):
+        sid = input("Enter Student ID: ")
+        if sid in self.students:
+            print("Student already exists")
+            return
