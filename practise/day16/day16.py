@@ -111,3 +111,10 @@ class StudentManagementSystem:
         course = input("Enter Course: ")
         self.students[sid] = Student(sid, name, age, course)
         print("Student added successfully")
+    def remove_student(self):
+        sid = input("Enter Student ID to remove: ")
+        if sid in self.students:
+            del self.students[sid]
+            print("Student removed")
+        else:
+            print("Student not found")
