@@ -136,3 +136,9 @@ class StudentManagementSystem:
             return
         for student in self.students.values():
             student.display()
+    def search_student(self):
+        sid = input("Enter Student ID to search: ")
+        if sid in self.students:
+            self.students[sid].display()
+        else:
+            print("Student not found")
