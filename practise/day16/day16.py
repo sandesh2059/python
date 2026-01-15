@@ -170,3 +170,5 @@ class StudentManagementSystem:
                 break
             else:
                 print("Invalid choice")
+sms = StudentManagementSystem()
+sms.menu()
