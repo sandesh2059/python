@@ -118,3 +118,8 @@ class StudentManagementSystem:
             print("Student removed")
         else:
             print("Student not found")
+    def update_student(self):
+        sid = input("Enter Student ID to update: ")
+        if sid not in self.students:
+            print("Student not found")
+            return
