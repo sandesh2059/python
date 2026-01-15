@@ -142,3 +142,13 @@ class StudentManagementSystem:
             self.students[sid].display()
         else:
             print("Student not found")
+    
+    def menu(self):
+        while True:
+            print("\n--- Student Management Menu ---")
+            print("1. Add Student")
+            print("2. Remove Student")
+            print("3. Update Student")
+            print("4. Display Students")
+            print("5. Search Student")
+            print("6. Exit")
