@@ -130,3 +130,9 @@ class StudentManagementSystem:
         self.students[sid].age = age
         self.students[sid].course = course
         print("Student updated successfully")
+    def display_students(self):
+        if not self.students:
+            print("No student records")
+            return
+        for student in self.students.values():
+            student.display()
