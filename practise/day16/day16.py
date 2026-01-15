@@ -106,3 +106,8 @@ class StudentManagementSystem:
         if sid in self.students:
             print("Student already exists")
             return
+        name = input("Enter Name: ")
+        age = int(input("Enter Age: "))
+        course = input("Enter Course: ")
+        self.students[sid] = Student(sid, name, age, course)
+        print("Student added successfully")
