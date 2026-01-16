@@ -214,3 +214,14 @@ class Bank:
             print("Amount deposited")
         else:
             print("Account not found")
+    def withdraw(self):
+        acc_no = input("Enter Account Number: ")
+        if acc_no in self.accounts:
+            amount = float(input("Enter withdraw amount: "))
+            if amount <= self.accounts[acc_no].balance:
+                self.accounts[acc_no].balance -= amount
+                print("Please collect cash")
+            else:
+                print("Insufficient balance")
+        else:
+            print("Account not found")
