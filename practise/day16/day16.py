@@ -187,3 +187,13 @@ class Account:
 class Bank:
     def __init__(self):
         self.accounts = {}
+    
+    def create_account(self):
+        acc_no = input("Enter Account Number: ")
+        if acc_no in self.accounts:
+            print("Account already exists")
+            return
+        name = input("Enter Account Holder Name: ")
+        balance = float(input("Enter Initial Balance: "))
+        self.accounts[acc_no] = Account(acc_no, name, balance)
+        print("Account created successfully")
