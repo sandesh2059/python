@@ -197,3 +197,11 @@ class Bank:
         balance = float(input("Enter Initial Balance: "))
         self.accounts[acc_no] = Account(acc_no, name, balance)
         print("Account created successfully")
+    
+    def delete_account(self):
+        acc_no = input("Enter Account Number to delete: ")
+        if acc_no in self.accounts:
+            del self.accounts[acc_no]
+            print("Account deleted")
+        else:
+            print("Account not found")
