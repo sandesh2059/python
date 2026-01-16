@@ -232,3 +232,10 @@ class Bank:
             return
         for acc in self.accounts.values():
             acc.display()
+
+    def search_account(self):
+        acc_no = input("Enter Account Number to search: ")
+        if acc_no in self.accounts:
+            self.accounts[acc_no].display()
+        else:
+            print("Account not found")
