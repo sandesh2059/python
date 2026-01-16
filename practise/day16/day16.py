@@ -184,3 +184,6 @@ class Account:
 
     def display(self):
         print(f"Account No: {self.acc_no} | Name: {self.name} | Balance: Rs.{self.balance}")
+class Bank:
+    def __init__(self):
+        self.accounts = {}
