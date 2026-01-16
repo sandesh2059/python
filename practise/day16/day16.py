@@ -205,3 +205,12 @@ class Bank:
             print("Account deleted")
         else:
             print("Account not found")
+    
+    def deposit(self):
+        acc_no = input("Enter Account Number: ")
+        if acc_no in self.accounts:
+            amount = float(input("Enter deposit amount: "))
+            self.accounts[acc_no].balance += amount
+            print("Amount deposited")
+        else:
+            print("Account not found")
