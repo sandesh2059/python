@@ -225,3 +225,10 @@ class Bank:
                 print("Insufficient balance")
         else:
             print("Account not found")
+    
+    def display_accounts(self):
+        if not self.accounts:
+            print("No accounts available")
+            return
+        for acc in self.accounts.values():
+            acc.display()
