@@ -306,3 +306,20 @@ class Hospital:
             print("4. Display Patients")
             print("5. Search Patient")
             print("6. Exit")
+            choice = input("Enter choice: ")
+
+            if choice == "1":
+                self.add_patient()
+            elif choice == "2":
+                self.remove_patient()
+            elif choice == "3":
+                self.update_patient()
+            elif choice == "4":
+                self.display_patients()
+            elif choice == "5":
+                self.search_patient()
+            elif choice == "6":
+                print("Exiting Hospital Management System")
+                break
+            else:
+                print("Invalid choice")
