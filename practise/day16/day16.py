@@ -272,3 +272,15 @@ class Hospital:
             print("Patient removed")
         else:
             print("Patient not found")
+    def update_patient(self):
+        pid = input("Enter Patient ID to update: ")
+        if pid not in self.patients:
+            print("Patient not found")
+            return
+        name = input("Enter new Name: ")
+        age = int(input("Enter new Age: "))
+        disease = input("Enter new Disease: ")
+        self.patients[pid].name = name
+        self.patients[pid].age = age
+        self.patients[pid].disease = disease
+        print("Patient updated successfully")
