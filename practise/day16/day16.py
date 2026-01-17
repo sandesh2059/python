@@ -284,3 +284,9 @@ class Hospital:
         self.patients[pid].age = age
         self.patients[pid].disease = disease
         print("Patient updated successfully")
+    def display_patients(self):
+        if not self.patients:
+            print("No patient records")
+            return
+        for patient in self.patients.values():
+            patient.display()
