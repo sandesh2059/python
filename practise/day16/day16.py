@@ -290,3 +290,10 @@ class Hospital:
             return
         for patient in self.patients.values():
             patient.display()
+
+    def search_patient(self):
+        pid = input("Enter Patient ID to search: ")
+        if pid in self.patients:
+            self.patients[pid].display()
+        else:
+            print("Patient not found")
