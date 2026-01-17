@@ -265,3 +265,10 @@ class Hospital:
         disease = input("Enter Disease: ")
         self.patients[pid] = Patient(pid, name, age, disease)
         print("Patient added successfully")
+    def remove_patient(self):
+        pid = input("Enter Patient ID to remove: ")
+        if pid in self.patients:
+            del self.patients[pid]
+            print("Patient removed")
+        else:
+            print("Patient not found")
