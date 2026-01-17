@@ -297,3 +297,12 @@ class Hospital:
             self.patients[pid].display()
         else:
             print("Patient not found")
+    def menu(self):
+        while True:
+            print("\n--- Hospital Management Menu ---")
+            print("1. Add Patient")
+            print("2. Remove Patient")
+            print("3. Update Patient")
+            print("4. Display Patients")
+            print("5. Search Patient")
+            print("6. Exit")
