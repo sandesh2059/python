@@ -251,3 +251,7 @@ class Patient:
 
     def display(self):
         print(f"ID: {self.pid} | Name: {self.name} | Age: {self.age} | Disease: {self.disease}")
+
+class Hospital:
+    def __init__(self):
+        self.patients = {}
