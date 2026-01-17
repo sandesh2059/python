@@ -323,3 +323,6 @@ class Hospital:
                 break
             else:
                 print("Invalid choice")
+
+hospital = Hospital()
+hospital.menu()
