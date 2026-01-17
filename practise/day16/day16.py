@@ -255,3 +255,13 @@ class Patient:
 class Hospital:
     def __init__(self):
         self.patients = {}
+    def add_patient(self):
+        pid = input("Enter Patient ID: ")
+        if pid in self.patients:
+            print("Patient already exists")
+            return
+        name = input("Enter Name: ")
+        age = int(input("Enter Age: "))
+        disease = input("Enter Disease: ")
+        self.patients[pid] = Patient(pid, name, age, disease)
+        print("Patient added successfully")
