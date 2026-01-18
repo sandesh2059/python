@@ -338,3 +338,7 @@ class Bus:
 
     def display(self):
         print(f"Bus No: {self.bus_no} | Route: {self.route} | Available Seats: {self.seats}")    
+
+class BusReservationSystem:
+    def __init__(self):
+        self.buses = {}
