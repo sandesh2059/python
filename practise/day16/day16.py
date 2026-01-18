@@ -374,3 +374,10 @@ class BusReservationSystem:
                 print("No seats available")
         else:
             print("Bus not found")
+    def cancel_ticket(self):
+        bus_no = input("Enter Bus Number: ")
+        if bus_no in self.buses:
+            self.buses[bus_no].seats += 1
+            print("Ticket cancelled successfully")
+        else:
+            print("Bus not found")
