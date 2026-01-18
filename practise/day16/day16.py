@@ -347,3 +347,7 @@ class BusReservationSystem:
         if bus_no in self.buses:
             print("Bus already exists")
             return
+        route = input("Enter Route: ")
+        seats = int(input("Enter Total Seats: "))
+        self.buses[bus_no] = Bus(bus_no, route, seats)
+        print("Bus added successfully")
