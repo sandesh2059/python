@@ -364,3 +364,13 @@ class BusReservationSystem:
             return
         for bus in self.buses.values():
             bus.display()
+    def book_ticket(self):
+        bus_no = input("Enter Bus Number: ")
+        if bus_no in self.buses:
+            if self.buses[bus_no].seats > 0:
+                self.buses[bus_no].seats -= 1
+                print("Ticket booked successfully")
+            else:
+                print("No seats available")
+        else:
+            print("Bus not found")
