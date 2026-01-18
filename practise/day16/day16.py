@@ -358,3 +358,9 @@ class BusReservationSystem:
             print("Bus removed")
         else:
             print("Bus not found")
+    def display_buses(self):
+        if not self.buses:
+            print("No buses available")
+            return
+        for bus in self.buses.values():
+            bus.display()
