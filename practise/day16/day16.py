@@ -342,3 +342,8 @@ class Bus:
 class BusReservationSystem:
     def __init__(self):
         self.buses = {}
+    def add_bus(self):
+        bus_no = input("Enter Bus Number: ")
+        if bus_no in self.buses:
+            print("Bus already exists")
+            return
