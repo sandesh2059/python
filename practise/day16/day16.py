@@ -351,3 +351,10 @@ class BusReservationSystem:
         seats = int(input("Enter Total Seats: "))
         self.buses[bus_no] = Bus(bus_no, route, seats)
         print("Bus added successfully")
+    def remove_bus(self):
+        bus_no = input("Enter Bus Number to remove: ")
+        if bus_no in self.buses:
+            del self.buses[bus_no]
+            print("Bus removed")
+        else:
+            print("Bus not found")
