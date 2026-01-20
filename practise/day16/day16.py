@@ -488,3 +488,13 @@ class MovieTicketSystem:
             self.movies[movie_id].display()
         else:
             print("Movie not found")
+    def menu(self):
+        while True:
+            print("\n--- Movie Ticket Booking Menu ---")
+            print("1. Add Movie")
+            print("2. Remove Movie")
+            print("3. Display Movies")
+            print("4. Book Ticket")
+            print("5. Cancel Ticket")
+            print("6. Search Movie")
+            print("7. Exit")
