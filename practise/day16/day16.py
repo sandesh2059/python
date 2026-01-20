@@ -498,3 +498,23 @@ class MovieTicketSystem:
             print("5. Cancel Ticket")
             print("6. Search Movie")
             print("7. Exit")
+        
+            choice = input("Enter choice: ")
+
+            if choice == "1":
+                self.add_movie()
+            elif choice == "2":
+                self.remove_movie()
+            elif choice == "3":
+                self.display_movies()
+            elif choice == "4":
+                self.book_ticket()
+            elif choice == "5":
+                self.cancel_ticket()
+            elif choice == "6":
+                self.search_movie()
+            elif choice == "7":
+                print("Thank you for using Movie Ticket System")
+                break
+            else:
+                print("Invalid choice")
