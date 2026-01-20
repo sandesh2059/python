@@ -435,3 +435,14 @@ class Movie:
 class MovieTicketSystem:
     def __init__(self):
         self.movies = {}
+    
+    def add_movie(self):
+        movie_id = input("Enter Movie ID: ")
+        if movie_id in self.movies:
+            print("Movie already exists")
+            return
+        name = input("Enter Movie Name: ")
+        seats = int(input("Enter Total Seats: "))
+        price = float(input("Enter Ticket Price: "))
+        self.movies[movie_id] = Movie(movie_id, name, seats, price)
+        print("Movie added successfully")
