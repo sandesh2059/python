@@ -460,3 +460,17 @@ class MovieTicketSystem:
             return
         for movie in self.movies.values():
             movie.display()
+    def book_ticket(self):
+        movie_id = input("Enter Movie ID: ")
+        if movie_id in self.movies:
+            count = int(input("Enter number of tickets: "))
+            movie = self.movies[movie_id]
+            if count <= movie.seats:
+                total = count * movie.price
+                movie.seats -= count
+                print(f"Tickets booked successfully")
+                print(f"Total amount: Rs.{total}")
+            else:
+                print("Not enough seats available")
+        else:
+            print("Movie not found")
