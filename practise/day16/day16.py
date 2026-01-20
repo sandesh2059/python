@@ -428,3 +428,7 @@ class Movie:
         self.name = name
         self.seats = seats
         self.price = price
+
+    def display(self):
+        print(f"ID: {self.movie_id} | Movie: {self.name} | Seats: {self.seats} | Price: Rs.{self.price}")
+
