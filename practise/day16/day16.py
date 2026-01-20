@@ -432,3 +432,6 @@ class Movie:
     def display(self):
         print(f"ID: {self.movie_id} | Movie: {self.name} | Seats: {self.seats} | Price: Rs.{self.price}")
 
+class MovieTicketSystem:
+    def __init__(self):
+        self.movies = {}
