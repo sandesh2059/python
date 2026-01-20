@@ -446,3 +446,11 @@ class MovieTicketSystem:
         price = float(input("Enter Ticket Price: "))
         self.movies[movie_id] = Movie(movie_id, name, seats, price)
         print("Movie added successfully")
+    
+    def remove_movie(self):
+        movie_id = input("Enter Movie ID to remove: ")
+        if movie_id in self.movies:
+            del self.movies[movie_id]
+            print("Movie removed")
+        else:
+            print("Movie not found")
