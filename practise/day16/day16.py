@@ -454,3 +454,9 @@ class MovieTicketSystem:
             print("Movie removed")
         else:
             print("Movie not found")
+    def display_movies(self):
+        if not self.movies:
+            print("No movies available")
+            return
+        for movie in self.movies.values():
+            movie.display()
