@@ -518,3 +518,5 @@ class MovieTicketSystem:
                 break
             else:
                 print("Invalid choice")
+system = MovieTicketSystem()
+system.menu()
