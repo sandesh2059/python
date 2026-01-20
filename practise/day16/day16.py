@@ -474,3 +474,11 @@ class MovieTicketSystem:
                 print("Not enough seats available")
         else:
             print("Movie not found")
+    def cancel_ticket(self):
+        movie_id = input("Enter Movie ID: ")
+        if movie_id in self.movies:
+            count = int(input("Enter number of tickets to cancel: "))
+            self.movies[movie_id].seats += count
+            print("Ticket cancelled successfully")
+        else:
+            print("Movie not found")
