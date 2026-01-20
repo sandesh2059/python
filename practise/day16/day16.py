@@ -482,3 +482,9 @@ class MovieTicketSystem:
             print("Ticket cancelled successfully")
         else:
             print("Movie not found")
+    def search_movie(self):
+        movie_id = input("Enter Movie ID to search: ")
+        if movie_id in self.movies:
+            self.movies[movie_id].display()
+        else:
+            print("Movie not found")
