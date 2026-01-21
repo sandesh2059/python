@@ -535,3 +535,13 @@ class ShoppingCart:
     def __init__(self):
         self.products = {}
         self.cart = {}
+    def add_product(self):
+        pid = input("Enter Product ID: ")
+        if pid in self.products:
+            print("Product already exists")
+            return
+        name = input("Enter Product Name: ")
+        price = float(input("Enter Price: "))
+        stock = int(input("Enter Stock: "))
+        self.products[pid] = Product(pid, name, price, stock)
+        print("Product added successfully")
