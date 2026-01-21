@@ -528,3 +528,10 @@ class Product:
         self.name = name
         self.price = price
         self.stock = stock
+    def display(self):
+        print(f"ID: {self.pid} | {self.name} | Price: Rs.{self.price} | Stock: {self.stock}")
+
+class ShoppingCart:
+    def __init__(self):
+        self.products = {}
+        self.cart = {}
