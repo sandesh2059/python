@@ -545,3 +545,10 @@ class ShoppingCart:
         stock = int(input("Enter Stock: "))
         self.products[pid] = Product(pid, name, price, stock)
         print("Product added successfully")
+    def remove_product(self):
+        pid = input("Enter Product ID to remove: ")
+        if pid in self.products:
+            del self.products[pid]
+            print("Product removed")
+        else:
+            print("Product not found")
