@@ -552,3 +552,9 @@ class ShoppingCart:
             print("Product removed")
         else:
             print("Product not found")
+    def display_products(self):
+        if not self.products:
+            print("No products available")
+            return
+        for product in self.products.values():
+            product.display()
