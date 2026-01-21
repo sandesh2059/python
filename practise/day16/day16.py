@@ -558,3 +558,16 @@ class ShoppingCart:
             return
         for product in self.products.values():
             product.display()
+    def add_to_cart(self):
+        pid = input("Enter Product ID: ")
+        if pid in self.products:
+            qty = int(input("Enter Quantity: "))
+            product = self.products[pid]
+            if qty <= product.stock:
+                self.cart[pid] = self.cart.get(pid, 0) + qty
+                product.stock -= qty
+                print("Product added to cart")
+            else:
+                print("Insufficient stock")
+        else:
+            print("Product not found")
