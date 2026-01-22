@@ -626,3 +626,21 @@ def play_game(limit, attempts):
     print("\n❌ Game Over")
     print(f"The correct number was: {secret}")
     return score
+
+def main():
+    total_score = 0
+    welcome()
+
+    while True:
+        limit, attempts = choose_level()
+        total_score += play_game(limit, attempts)
+
+        print(f"\n🏆 Total Score: {total_score}")
+        again = input("Play again? (y/n): ").lower()
+
+        if again != "y":
+            print("\nThanks for playing! 👋")
+            break
+
+
+main()
