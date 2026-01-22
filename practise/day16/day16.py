@@ -590,3 +590,12 @@ def choose_level():
     print("2. Medium (1 - 50)")
     print("3. Hard   (1 - 100)")
     choice = input("Enter choice: ")
+    if choice == "1":
+        return 10, 10
+    elif choice == "2":
+        return 50, 7
+    elif choice == "3":
+        return 100, 5
+    else:
+        print("Invalid choice, defaulting to Easy")
+        return 10, 10
