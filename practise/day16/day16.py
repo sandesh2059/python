@@ -602,3 +602,13 @@ def choose_level():
 def play_game(limit, attempts):
     secret = random.randint(1, limit)
     score = 0
+
+    print(f"\nGuess a number between 1 and {limit}")
+    print(f"You have {attempts} attempts\n")
+
+    for attempt in range(1, attempts + 1):
+        try:
+            guess = int(input(f"Attempt {attempt}: "))
+        except ValueError:
+            print("❌ Enter a valid number")
+            continue
