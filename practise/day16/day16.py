@@ -599,3 +599,6 @@ def choose_level():
     else:
         print("Invalid choice, defaulting to Easy")
         return 10, 10
+def play_game(limit, attempts):
+    secret = random.randint(1, limit)
+    score = 0
