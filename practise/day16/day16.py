@@ -612,3 +612,9 @@ def play_game(limit, attempts):
         except ValueError:
             print("❌ Enter a valid number")
             continue
+
+        if guess == secret:
+            score = (attempts - attempt + 1) * 10
+            print("🎉 Correct Guess!")
+            print(f"Your Score: {score}")
+            return score
