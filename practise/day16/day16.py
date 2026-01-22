@@ -618,3 +618,11 @@ def play_game(limit, attempts):
             print("🎉 Correct Guess!")
             print(f"Your Score: {score}")
             return score
+        elif guess < secret:
+            print("📉 Too Low")
+        else:
+            print("📈 Too High")
+
+    print("\n❌ Game Over")
+    print(f"The correct number was: {secret}")
+    return score
