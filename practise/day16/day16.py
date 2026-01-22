@@ -581,4 +581,5 @@ def welcome():
     print("=" * 40)
     print("Rules:")
     print("• Guess the number correctly")
-    print("• Fewer attempts = higher score"
+    print("• Fewer attempts = higher score")
+    print("• Levels increase difficulty\n")
