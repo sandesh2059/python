@@ -583,3 +583,10 @@ def welcome():
     print("• Guess the number correctly")
     print("• Fewer attempts = higher score")
     print("• Levels increase difficulty\n")
+
+def choose_level():
+    print("Choose Level:")
+    print("1. Easy   (1 - 10)")
+    print("2. Medium (1 - 50)")
+    print("3. Hard   (1 - 100)")
+    choice = input("Enter choice: ")
