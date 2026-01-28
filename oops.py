@@ -248,3 +248,21 @@ def library_fine():
         fine = days_late * 10
 
     print("Library Fine: Rs.", fine)
+
+while True:
+    print("\n--- MENU ---")
+    print("1. Attendance Marks")
+    print("2. Library Fine")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        attendance_marks()
+    elif choice == '2':
+        library_fine()
+    elif choice == '3':
+        print("Thank you!")
+        break
+    else:
+        print("Invalid choice")
