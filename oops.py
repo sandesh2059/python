@@ -228,3 +228,12 @@ def attendance_marks():
     attended_classes = int(input("Enter classes attended: "))
     percentage = (attended_classes / total_classes) * 100
     print("Attendance Percentage:", percentage)
+
+    if percentage >= 90:
+        print("Attendance Marks: 10")
+    elif percentage >= 75:
+        print("Attendance Marks: 8")
+    elif percentage >= 60:
+        print("Attendance Marks: 5")
+    else:
+        print("Attendance Marks: 0")
