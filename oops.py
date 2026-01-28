@@ -237,3 +237,14 @@ def attendance_marks():
         print("Attendance Marks: 5")
     else:
         print("Attendance Marks: 0")
+def library_fine():
+    days_late = int(input("Enter number of late days: "))
+
+    if days_late <= 5:
+        fine = days_late * 2
+    elif days_late <= 10:
+        fine = days_late * 5
+    else:
+        fine = days_late * 10
+
+    print("Library Fine: Rs.", fine)
