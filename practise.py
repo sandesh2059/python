@@ -28,3 +28,6 @@ def count_characters(text):
         else:
             char_count[char] = 1
     return char_count
+
+def reverse_string(text):
+    return text[::-1]
