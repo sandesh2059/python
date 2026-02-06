@@ -10,3 +10,12 @@ student_info = {
     "age": 22,
     "course": "CS"
 }
+def separate_even_odd(numbers):
+    even = []
+    odd = []
+    for num in numbers:
+        if num % 2 == 0:
+            even.append(num)
+        else:
+            odd.append(num)
+    return even, odd
