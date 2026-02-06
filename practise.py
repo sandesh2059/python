@@ -49,3 +49,11 @@ print("Odd:", odd_nums)
 print("Char Count:", char_result)
 print("Reversed:", reversed_word)
 print("Max Value:", max_value)
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name        # public attribute
+        self._age = age         # protected attribute
+
+    def display_info(self):
+        return f"Name: {self.name}, Age: {self._age}"
