@@ -57,3 +57,11 @@ class Person:
 
     def display_info(self):
         return f"Name: {self.name}, Age: {self._age}"
+    
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    def display_info(self):
+        return f"Student {self.name}, ID: {self.student_id}, Age: {self._age}"
