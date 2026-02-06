@@ -38,3 +38,8 @@ def find_max(numbers):
         if num > max_num:
             max_num = num
     return max_num
+
+even_nums, odd_nums = separate_even_odd(numbers_list)
+char_result = count_characters("interview")
+reversed_word = reverse_string("Python")
+max_value = find_max(numbers_list)
