@@ -65,3 +65,14 @@ class Student(Person):
 
     def display_info(self):
         return f"Student {self.name}, ID: {self.student_id}, Age: {self._age}"
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance   # private attribute
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return "Deposit successful"
+        return "Invalid amount"
