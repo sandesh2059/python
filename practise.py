@@ -95,3 +95,16 @@ print(student1.display_info())
 print(account1.deposit(2000))
 print(account1.withdraw(1000))
 print("Balance:", account1.get_balance())
+
+for i in range(1, 11):
+    if i % 3 == 0:
+        print(f"{i} is divisible by 3")
+    else:
+        print(f"{i} is not divisible by 3")
+
+# ---------- LIST COMPREHENSION ----------
+squared_numbers = [n ** 2 for n in numbers_list]
+even_only = [n for n in numbers_list if n % 2 == 0]
+
+print("Squared:", squared_numbers)
+print("Even Only:", even_only)
