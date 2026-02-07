@@ -108,3 +108,10 @@ even_only = [n for n in numbers_list if n % 2 == 0]
 
 print("Squared:", squared_numbers)
 print("Even Only:", even_only)
+
+try:
+    value = int("abc")
+except ValueError:
+    print("Conversion failed!")
+finally:
+    print("Execution completed")
