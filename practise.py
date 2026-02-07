@@ -84,3 +84,14 @@ class BankAccount:
 
     def get_balance(self):
         return self.__balance
+    
+person1 = Person("Ram", 30)
+student1 = Student("Shyam", 21, "STU101")
+account1 = BankAccount("Sandesh", 5000)
+
+print(person1.display_info())
+print(student1.display_info())
+
+print(account1.deposit(2000))
+print(account1.withdraw(1000))
+print("Balance:", account1.get_balance())
