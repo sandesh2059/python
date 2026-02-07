@@ -76,3 +76,11 @@ class BankAccount:
             self.__balance += amount
             return "Deposit successful"
         return "Invalid amount"
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+            return "Withdrawal successful"
+        return "Insufficient balance"
+
+    def get_balance(self):
+        return self.__balance
