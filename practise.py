@@ -151,3 +151,11 @@ def factorial(n):
 def is_palindrome(text):
     cleaned = text.lower().replace(" ", "")
     return cleaned == cleaned[::-1]
+
+def fibonacci(limit):
+    series = []
+    a, b = 0, 1
+    while a <= limit:
+        series.append(a)
+        a, b = b, a + b
+    return series
