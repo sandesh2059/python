@@ -115,3 +115,14 @@ except ValueError:
     print("Conversion failed!")
 finally:
     print("Execution completed")
+
+
+INT_VAL = 100
+FLOAT_VAL = 25.75
+STR_VAL = "Python Interview"
+BOOL_VAL = True
+
+LIST_VAL = [5, 10, 15, 20, 25]
+TUPLE_VAL = (1, 2, 3)
+SET_VAL = {1, 2, 3, 4}
+DICT_VAL = {"lang": "Python", "level": "Intermediate"}
