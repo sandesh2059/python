@@ -126,3 +126,15 @@ LIST_VAL = [5, 10, 15, 20, 25]
 TUPLE_VAL = (1, 2, 3)
 SET_VAL = {1, 2, 3, 4}
 DICT_VAL = {"lang": "Python", "level": "Intermediate"}
+
+def sum_list(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+
+def average_list(numbers):
+    if not numbers:
+        return 0
+    return sum_list(numbers) / len(numbers)
