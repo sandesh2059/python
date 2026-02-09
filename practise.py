@@ -201,3 +201,13 @@ def find_duplicates(nums):
     return list(duplicates)
 
 print(find_duplicates([1,2,3,2,4,5,1]))
+
+def fib(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fib(n-1) + fib(n-2)
+    return memo[n]
+
+print(fib(10))
