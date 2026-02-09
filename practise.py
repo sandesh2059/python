@@ -159,3 +159,14 @@ def fibonacci(limit):
         series.append(a)
         a, b = b, a + b
     return series
+
+
+
+
+def reverse_string(s):
+    result = ""
+    for ch in s:
+        result = ch + result
+    return result
+
+print(reverse_string("interview"))
