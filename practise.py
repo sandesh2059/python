@@ -211,3 +211,15 @@ def fib(n, memo={}):
     return memo[n]
 
 print(fib(10))
+
+def second_largest(nums):
+    first = second = float('-inf')
+    for n in nums:
+        if n > first:
+            second = first
+            first = n
+        elif first > n > second:
+            second = n
+    return second
+
+print(second_largest([10, 5, 20, 8]))
