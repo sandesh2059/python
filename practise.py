@@ -274,3 +274,20 @@ class CountDown:
 
 for num in CountDown(5):
     print(num)
+
+import time
+
+def time_taken(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print("Time:", time.time() - start)
+        return result
+    return wrapper
+
+@time_taken
+def slow_function():
+    for _ in range(10**6):
+        pass
+
+slow_function()
