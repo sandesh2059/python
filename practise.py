@@ -241,3 +241,20 @@ def merge_sorted(a, b):
     return result
 
 print(merge_sorted([1,3,5], [2,4,6]))
+
+def are_anagrams(s1, s2):
+    if len(s1) != len(s2):
+        return False
+
+    count = {}
+    for ch in s1:
+        count[ch] = count.get(ch, 0) + 1
+
+    for ch in s2:
+        if ch not in count or count[ch] == 0:
+            return False
+        count[ch] -= 1
+
+    return True
+
+print(are_anagrams("listen", "silent"))
