@@ -69,3 +69,17 @@ def remove_duplicates(lst):
     return result
 
 print(remove_duplicates([1,2,2,3,4,4,5]))
+
+
+def two_sum(nums, target):
+    seen = {}
+    
+    for i, num in enumerate(nums):
+        complement = target - num
+        
+        if complement in seen:
+            return [seen[complement], i]
+        
+        seen[num] = i
+
+print(two_sum([2,7,11,15], 9))
