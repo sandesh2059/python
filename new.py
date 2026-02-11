@@ -43,3 +43,18 @@ def char_frequency(s):
     return freq
 
 print(char_frequency("programming"))
+
+
+
+def is_palindrome(num):
+    original = num
+    reversed_num = 0
+    
+    while num > 0:
+        digit = num % 10
+        reversed_num = reversed_num * 10 + digit
+        num //= 10
+    
+    return original == reversed_num
+
+print(is_palindrome(121))
