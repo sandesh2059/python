@@ -83,3 +83,13 @@ def two_sum(nums, target):
         seen[num] = i
 
 print(two_sum([2,7,11,15], 9))
+
+
+def find_missing(nums):
+    n = len(nums) + 1
+    expected_sum = n * (n + 1) // 2
+    actual_sum = sum(nums)
+    
+    return expected_sum - actual_sum
+
+print(find_missing([1,2,3,5,6]))
