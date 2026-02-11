@@ -30,3 +30,16 @@ def second_largest(nums):
     return second
 
 print(second_largest([10, 20, 4, 45, 99]))
+
+def char_frequency(s):
+    freq = {}
+    
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    
+    return freq
+
+print(char_frequency("programming"))
