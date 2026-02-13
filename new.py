@@ -113,3 +113,12 @@ def is_anagram(s1, s2):
     return True
 
 print(is_anagram("listen", "silent"))
+
+
+def reverse_string(s):
+    result = ""
+    for char in s:
+        result = char + result
+    return result
+
+print(reverse_string("Sandesh"))
