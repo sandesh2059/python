@@ -129,3 +129,11 @@ def is_palindrome(s):
 
 print(is_palindrome("madam"))  # True
 print(is_palindrome("python")) # False
+
+
+def second_largest(nums):
+    unique_nums = list(set(nums))
+    unique_nums.sort()
+    return unique_nums[-2]
+
+print(second_largest([10, 20, 4, 45, 99, 99]))
