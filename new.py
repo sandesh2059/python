@@ -122,3 +122,10 @@ def reverse_string(s):
     return result
 
 print(reverse_string("Sandesh"))
+
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+print(is_palindrome("madam"))  # True
+print(is_palindrome("python")) # False
