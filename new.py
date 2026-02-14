@@ -202,3 +202,10 @@ def flatten(lst):
     return result
 
 print(flatten([1, [2, 3], [4, [5, 6]]]))
+
+
+def longest_word(sentence):
+    words = sentence.split()
+    return max(words, key=len)
+
+print(longest_word("Python is very powerful language"))
