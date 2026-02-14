@@ -162,3 +162,17 @@ def fizzbuzz(n):
             print(i)
 
 fizzbuzz(20)
+
+def find_duplicates(lst):
+    seen = set()
+    duplicates = set()
+    
+    for num in lst:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+    
+    return list(duplicates)
+
+print(find_duplicates([1,2,3,4,2,5,1,6]))
