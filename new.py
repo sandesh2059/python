@@ -215,3 +215,13 @@ def rotate_list(lst, k):
     return lst[-k:] + lst[:-k]
 
 print(rotate_list([1,2,3,4,5], 2))
+
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+print(count_vowels("Sandesh"))
