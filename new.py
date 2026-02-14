@@ -186,3 +186,8 @@ def is_prime(n):
     return True
 
 print(is_prime(29))
+
+def list_intersection(a, b):
+    return list(set(a) & set(b))
+
+print(list_intersection([1,2,3,4], [3,4,5,6]))
