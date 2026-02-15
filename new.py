@@ -233,3 +233,27 @@ def first_non_repeating(s):
     return None
 
 print(first_non_repeating("aabbcddex"))
+
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if self.stack:
+            return self.stack.pop()
+        return "Stack is empty"
+
+    def peek(self):
+        if self.stack:
+            return self.stack[-1]
+        return None
+
+
+s = Stack()
+s.push(10)
+s.push(20)
+print(s.pop())
+print(s.peek())
