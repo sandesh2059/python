@@ -276,3 +276,19 @@ def two_sum(nums, target):
         lookup[num] = i
 
 print(two_sum([2,7,11,15], 9))
+
+def is_valid(s):
+    stack = []
+    mapping = {')': '(', '}': '{', ']': '['}
+    
+    for char in s:
+        if char in mapping:
+            top = stack.pop() if stack else '#'
+            if mapping[char] != top:
+                return False
+        else:
+            stack.append(char)
+    
+    return not stack
+
+print(is_valid("()[]{}"))
