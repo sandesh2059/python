@@ -257,3 +257,11 @@ s.push(10)
 s.push(20)
 print(s.pop())
 print(s.peek())
+
+def factorial(n):
+    result = 1
+    for i in range(2, n+1):
+        result *= i
+    return result
+
+print(factorial(5))
