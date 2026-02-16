@@ -34,25 +34,41 @@
 # print(reverse_string(word = 'sandesh'))
 
 
-def is_prime_list(numbers):
-    primes = []
-    for num in numbers:
-        if num <= 1:
-            continue
-        is_prime = True
-        for i in range(2, num):
-            if num % i == 0:
-                is_prime = False
-                break
-        if is_prime:
-            primes.append(num)
-    return primes
+# def is_prime_list(numbers):
+#     primes = []
+#     for num in numbers:
+#         if num <= 1:
+#             continue
+#         is_prime = True
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 is_prime = False
+#                 break
+#         if is_prime:
+#             primes.append(num)
+#     return primes
         
-listing = []
-n = int(input("how many elements do you need in a list: "))
-for i in range(n):
-    number = int(input(f"enter a number {i+1}: "))
-    listing.append(number)
+# listing = []
+# n = int(input("how many elements do you need in a list: "))
+# for i in range(n):
+#     number = int(input(f"enter a number {i+1}: "))
+#     listing.append(number)
 
-print(is_prime_list(listing))
+# print(is_prime_list(listing))
             
+
+def is_palindrome_list(words):
+    palindrome = []
+    for word in words:
+        if word == word[::-1]:
+            palindrome.append(word)
+    return palindrome
+        
+
+w = int(input("how many words do you want in your list: "))
+words = []
+for i in range(w):
+    string = input(f"enter the number {i+1} word: ")
+    words.append(string)
+
+print(is_palindrome_list(words))
