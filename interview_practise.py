@@ -21,6 +21,14 @@
 # print(list_comprehension(a))
 
 
-num = [1, 2, 3, 4, 5]
-new_num = [n+10 for n in num ]
-print(new_num)
+# num = [1, 2, 3, 4, 5]
+# new_num = [n+10 for n in num ]
+# print(new_num)
+
+
+def reverse_string(word):
+    rev = ''
+    for i in word:
+        rev = i + rev
+    return rev
+print(reverse_string(word = 'sandesh'))
