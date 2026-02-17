@@ -94,3 +94,14 @@
 # print(is_palindrome('sandesh'))
 
 
+
+# def count_frequency(text):
+#     freq = {}
+#     for char in text:
+#         if char in freq:
+#             freq[char] += 1
+#         else:
+#             freq[char] = 1
+#     return freq
+
+# print(count_frequency('sandesh'))
