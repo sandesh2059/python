@@ -112,12 +112,39 @@
 
 
 
-# Task 1: List Filtering & Transformation
-# Given a list of integers: numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# # Task 1: List Filtering & Transformation
+# # Given a list of integers: numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# Write a List Comprehension that creates a new list containing the squares of only the even numbers.
+# # Write a List Comprehension that creates a new list containing the squares of only the even numbers.
 
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-square = [n * n for n in numbers if n % 2 == 0]
-print(square)
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# square = [n * n for n in numbers if n % 2 == 0]
+# print(square)
+
+
+
+
+
+
+
+# Task 2: Character Frequency & Logic
+# The Goal: Given a string, create a dictionary of character counts.
+# The Twist: Exclude spaces and hyphens.
+
+# Python
+# sentence = "django is a high-level python web framework"
+# Write the code to generate that dictionary. How will you handle the exclusion of those specific characters?
+def frequency(sentence):
+
+    freq = {}
+    for char in sentence:
+        if char == ' ' or char == '-':
+            continue
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+sentence = "django is a high-level python web framework"
+print(frequency(sentence))
