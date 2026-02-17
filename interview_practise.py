@@ -57,18 +57,40 @@
 # print(is_prime_list(listing))
             
 
-def is_palindrome_list(words):
-    palindrome = []
-    for word in words:
-        if word == word[::-1]:
-            palindrome.append(word)
-    return palindrome
+# def is_palindrome_list(words):
+#     palindrome = []
+#     for word in words:
+#         if word == word[::-1]:
+#             palindrome.append(word)
+#     return palindrome
         
 
-w = int(input("how many words do you want in your list: "))
-words = []
-for i in range(w):
-    string = input(f"enter the number {i+1} word: ")
-    words.append(string)
+# w = int(input("how many words do you want in your list: "))
+# words = []
+# for i in range(w):
+#     string = input(f"enter the number {i+1} word: ")
+#     words.append(string)
 
-print(is_palindrome_list(words))
+# print(is_palindrome_list(words))
+
+
+
+
+# def is_palindrome(word):
+#     rev = ''
+#     for i in word:
+#         rev = i + rev
+#     return rev
+
+# print(is_palindrome('sandesh'))
+
+# OR
+
+# def is_palindrome(word):
+#     if word == word[::-1]:
+#         return True
+#     return False
+
+# print(is_palindrome('sandesh'))
+
+
