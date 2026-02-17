@@ -105,3 +105,19 @@
 #     return freq
 
 # print(count_frequency('sandesh'))
+
+
+
+
+
+
+
+# Task 1: List Filtering & Transformation
+# Given a list of integers: numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Write a List Comprehension that creates a new list containing the squares of only the even numbers.
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+square = [n * n for n in numbers if n % 2 == 0]
+print(square)
