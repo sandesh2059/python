@@ -135,16 +135,50 @@
 # Python
 # sentence = "django is a high-level python web framework"
 # Write the code to generate that dictionary. How will you handle the exclusion of those specific characters?
-def frequency(sentence):
+# def frequency(sentence):
 
-    freq = {}
-    for char in sentence:
-        if char == ' ' or char == '-':
-            continue
-        if char in freq:
-            freq[char] += 1
+#     freq = {}
+#     for char in sentence:
+#         if char == ' ' or char == '-':
+#             continue
+#         if char in freq:
+#             freq[char] += 1
+#         else:
+#             freq[char] = 1
+#     return freq
+# sentence = "django is a high-level python web framework"
+# print(frequency(sentence))
+
+
+
+
+
+
+# Task 3: Finding Duplicates
+# Let's move to a common list challenge.
+
+# The Goal: Given a list, find which items appear more than once.
+
+# Python
+# items = ["apple", "banana", "cherry", "apple", "orange", "cherry", "cherry"]
+# Constraint: Your function should return a list of the duplicates: ["apple", "cherry"].
+
+
+items = ["apple", "banana", "cherry", "apple", "orange", "cherry", "cherry"]
+
+def dup_list(items):
+    items1 = {}
+    items2 = []
+    for item in items:
+        if item in items1:
+            items1[item] +=1
         else:
-            freq[char] = 1
-    return freq
-sentence = "django is a high-level python web framework"
-print(frequency(sentence))
+            items1[item] = 1
+    for item in items1:
+        if items1[item] > 1:
+            items2.append(item)
+    return items2
+
+print(dup_list(items))
+
+
