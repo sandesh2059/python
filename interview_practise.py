@@ -164,21 +164,56 @@
 # Constraint: Your function should return a list of the duplicates: ["apple", "cherry"].
 
 
-items = ["apple", "banana", "cherry", "apple", "orange", "cherry", "cherry"]
+# items = ["apple", "banana", "cherry", "apple", "orange", "cherry", "cherry"]
 
-def dup_list(items):
-    items1 = {}
-    items2 = []
-    for item in items:
-        if item in items1:
-            items1[item] +=1
-        else:
-            items1[item] = 1
-    for item in items1:
-        if items1[item] > 1:
-            items2.append(item)
-    return items2
+# def dup_list(items):
+#     items1 = {}
+#     items2 = []
+#     for item in items:
+#         if item in items1:
+#             items1[item] +=1
+#         else:
+#             items1[item] = 1
+#     for item in items1:
+#         if items1[item] > 1:
+#             items2.append(item)
+#     return items2
 
-print(dup_list(items))
+# print(dup_list(items))
 
 
+
+
+
+
+
+
+
+
+
+
+# Task 4: The "API Result" Re-map
+# This is a very common task in Django when you've fetched a list of objects (like from a database or a JSON API) and need to transform them for quick lookup.
+
+# The Scenario:
+
+# Python
+# api_data = [
+#     {"id": 101, "name": "Laptop", "price": 1200},
+#     {"id": 102, "name": "Mouse", "price": 25},
+#     {"id": 103, "name": "Monitor", "price": 300},
+# ]
+# The Goal: Create a new dictionary where the id is the key and the price is the value.
+# Target Output: {101: 1200, 102: 25, 103: 300}
+
+
+
+api_data = [
+    {"id": 101, "name": "Laptop", "price": 1200},
+    {"id": 102, "name": "Mouse", "price": 25},
+    {"id": 103, "name": "Monitor", "price": 300},
+]
+
+price_map = {item['id']: item['price'] for item in api_data}
+
+print(price_map)
