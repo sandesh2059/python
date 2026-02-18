@@ -208,12 +208,42 @@
 
 
 
-api_data = [
-    {"id": 101, "name": "Laptop", "price": 1200},
-    {"id": 102, "name": "Mouse", "price": 25},
-    {"id": 103, "name": "Monitor", "price": 300},
-]
+# api_data = [
+#     {"id": 101, "name": "Laptop", "price": 1200},
+#     {"id": 102, "name": "Mouse", "price": 25},
+#     {"id": 103, "name": "Monitor", "price": 300},
+# ]
 
-price_map = {item['id']: item['price'] for item in api_data}
+# price_map = {item['id']: item['price'] for item in api_data}
 
-print(price_map)
+# print(price_map)
+
+
+
+
+
+
+# Task 5: Grouping Data
+
+# The Goal: Given a list of names, group them by their first letter.
+
+# Python
+# names = ["Alice", "Bob", "Charlie", "Alex", "Ben"]
+# Target Output:
+# {'A': ['Alice', 'Alex'], 'B': ['Bob', 'Ben'], 'C': ['Charlie']}
+
+names = ["Alice", "Bob", "Charlie", "Alex", "Ben"]
+
+new = {}
+for name in names:
+    letter = name[0]
+    
+    if letter not in new:
+        new[letter] = []
+    new[letter].append(name)
+
+
+print(new)
+
+
+
