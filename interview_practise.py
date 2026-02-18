@@ -232,18 +232,23 @@
 # Target Output:
 # {'A': ['Alice', 'Alex'], 'B': ['Bob', 'Ben'], 'C': ['Charlie']}
 
-names = ["Alice", "Bob", "Charlie", "Alex", "Ben"]
+# names = ["Alice", "Bob", "Charlie", "Alex", "Ben"]
 
-new = {}
-for name in names:
-    letter = name[0]
+# new = {}
+# for name in names:
+#     letter = name[0]
     
-    if letter not in new:
-        new[letter] = []
-    new[letter].append(name)
+#     if letter not in new:
+#         new[letter] = []
+#     new[letter].append(name)
 
 
-print(new)
+# print(new)
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+numbers2 = [n * n for n in numbers if n%2==0]
+print(numbers2)
 
 
 
