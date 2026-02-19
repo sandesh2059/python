@@ -246,9 +246,23 @@
 # print(new)
 
 
-numbers = [1, 2, 3, 4, 5, 6]
-numbers2 = [n * n for n in numbers if n%2==0]
-print(numbers2)
+# numbers = [1, 2, 3, 4, 5, 6]
+# numbers2 = [n * n for n in numbers if n%2==0]
+# print(numbers2)
 
 
 
+
+# Question 6:
+# Can you explain what Inheritance is in Python? If I have a class Animal, how would I create a class Dog that inherits from it?
+
+# Bonus points: Do you know what the super() function does?
+
+class Animal:
+    def __init__(self, sound):
+        self.sound = sound
+    
+class Dog(Animal):
+    def __init__(self, sound):
+        super().__init__(sound)
+        
