@@ -292,3 +292,15 @@ def is_valid(s):
     return not stack
 
 print(is_valid("()[]{}"))
+
+
+books = {}
+
+books[101] = {"title": "Python", "copies": 3}
+books[102] = {"title": "Java", "copies": 2}
+books[101]["Available"] = True
+print(books[101]) 
+if books[101]['Available'] == False:
+    print(f"{books[102]}")
+else:
+    print("just practising")
